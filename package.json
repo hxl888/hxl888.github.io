@@ -1,0 +1,25 @@
+{
+  "name": "hxl888.github.io",
+  "version": "1.0.0",
+  "description": "my blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hxl888/hxl888.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hxl888/hxl888.github.io/issues"
+  },
+  "homepage": "https://github.com/hxl888/hxl888.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^0.12.0"
+  }
+}
