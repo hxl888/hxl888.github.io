@@ -1,3 +1,3 @@
 var ghpages = require('gh-pages');
 
-ghpages.publish('docs/.vuepress/dist', function(err) {});
+ghpages.publish('dist', function(err) {});
