@@ -20,6 +20,9 @@ git commit -m 'deploy'
 # git push -f git@github.com:hxl888/hxl888.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:hxl888/hxl888.github.io.git master:master
+git push -f git@github.com:hxl888/hxl888.github.io.git master:gh-pages
+
+# sudo scp -r ./* root@188.131.134.233:/webPro/hxlgo/
+
 
 cd -
