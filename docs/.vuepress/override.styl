@@ -1,0 +1,57 @@
+$accentColor = #3eaf7c // 主题色
+$textColor = #2c3e50 // 文字颜色
+$borderColor = #eaecef // 边框颜色
+$codeBgColor = #282c34 // 代码背景颜色
+// -webkit-animation:change 3s linear infinite
+
+.m-mainBox
+  position: relative;
+  min-height: 500px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  .m-tit
+    text-align: center;
+    font-size: 36px;
+  img 
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 6;
+    position:absolute; 
+    left:0;
+    top: 10%;
+    &.m-face
+      -webkit-animation:changeFace 5s linear infinite forwards
+    &.m-back
+      backface-visibility: hidden;
+      -webkit-animation:changeBack 5s linear infinite forwards
+  .m-background
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -190px;
+    width: 380px;
+    height: 380px;
+    z-index: 5;
+    -webkit-animation: circle 10s linear infinite;
+    background: url('/m-background.png') no-repeat center;
+    background-size: 100% 100%;
+
+@keyframes changeFace
+  from
+    -webkit-transform:rotateY(0deg)
+  to
+    -webkit-transform:rotateY(360deg)
+
+@keyframes changeBack
+  from
+    -webkit-transform:rotateY(360deg)
+  to
+    -webkit-transform:rotateY(0deg)
+
+@keyframes circle
+  from
+    -webkit-transform:rotateZ(0deg)
+  to
+    -webkit-transform:rotateZ(360deg)
