@@ -22,6 +22,8 @@
   "homepage": "https://github.com/hxl888/hxl888.github.io#readme",
   "devDependencies": {
     "ghpages": "0.0.10",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
     "vuepress": "^0.12.0"
   }
 }
