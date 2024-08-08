@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>es6 | 蜗蜗🐇</title>
+    <meta name="description" content="从零开始一步一步飙起来">
+    <link rel="icon" href="/myIcon.ico">
+    
+    <link rel="preload" href="/assets/css/styles.c7e086f0.css" as="style"><link rel="preload" href="/assets/js/app.c7e086f0.js" as="script"><link rel="preload" href="/assets/js/13.28310326.js" as="script"><link rel="prefetch" href="/assets/css/1.styles.68aee00d.css"><link rel="prefetch" href="/assets/css/2.styles.d1dddd6f.css"><link rel="prefetch" href="/assets/js/1.68aee00d.js"><link rel="prefetch" href="/assets/js/10.999d289c.js"><link rel="prefetch" href="/assets/js/11.82756d16.js"><link rel="prefetch" href="/assets/js/12.65cc639e.js"><link rel="prefetch" href="/assets/js/14.806859aa.js"><link rel="prefetch" href="/assets/js/15.18a18ef2.js"><link rel="prefetch" href="/assets/js/16.c0969d6b.js"><link rel="prefetch" href="/assets/js/17.21096078.js"><link rel="prefetch" href="/assets/js/18.5b4893c3.js"><link rel="prefetch" href="/assets/js/19.da070b39.js"><link rel="prefetch" href="/assets/js/2.d1dddd6f.js"><link rel="prefetch" href="/assets/js/3.bd510fb8.js"><link rel="prefetch" href="/assets/js/4.32fa4d48.js"><link rel="prefetch" href="/assets/js/5.30c1c9c0.js"><link rel="prefetch" href="/assets/js/6.2abe4e41.js"><link rel="prefetch" href="/assets/js/7.0aac4afd.js"><link rel="prefetch" href="/assets/js/8.bb15a03e.js"><link rel="prefetch" href="/assets/js/9.c0befbf8.js">
+    <link rel="stylesheet" href="/assets/css/styles.c7e086f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      蜗蜗🐇
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/pages/resume/" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/pages/gits/" class="nav-link">git</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link router-link-active">js集</a></div><div class="nav-item"><a href="/pages/macConfig/" class="nav-link">mac配置小絮</a></div><div class="nav-item"><a href="/pages/toSumUp/" class="nav-link">小结</a></div><div class="nav-item"><a href="/pages/backstage/" class="nav-link">后端</a></div><a href="https://github.com/hxl888" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/pages/resume/" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/pages/gits/" class="nav-link">git</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link router-link-active">js集</a></div><div class="nav-item"><a href="/pages/macConfig/" class="nav-link">mac配置小絮</a></div><div class="nav-item"><a href="/pages/toSumUp/" class="nav-link">小结</a></div><div class="nav-item"><a href="/pages/backstage/" class="nav-link">后端</a></div><a href="https://github.com/hxl888" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/pages/javascript/" aria-current="page" class="sidebar-link">— js 目录 —</a></li><li><a href="/pages/javascript/es6.html" aria-current="page" class="active sidebar-link">es6</a></li><li><a href="/pages/javascript/numSort.html" class="sidebar-link">js排序算法</a></li><li><a href="/pages/javascript/algorithm.html" class="sidebar-link">js 算法</a></li></ul></div><div class="page"><div class="content"><h1 id="es6"><a href="#es6" class="header-anchor">#</a> es6</h1><p>1.判断两个值是否相等(es6语法)：</p><div class="language- extra-class"><pre class="language-text"><code>Object.is(NAN, NAN); // true
+Object.is(+0, -0 ); // false
++0 === -0; // true
+</code></pre></div><p>2.es6 ``特殊用法：</p><div class="language- extra-class"><pre class="language-text"><code>let a = '哈哈';
+let b = '呵呵';
+ let c = func`你说${a}我说${b}！！`;
+ func(strings, values) {
+     console.log(strings); // 你说 我说   ！！！
+     console.log(values); // 哈哈 呵呵
+ }
+</code></pre></div><p>3.Object.setPrototypeOf  和  <strong>proto</strong></p><div class="language- extra-class"><pre class="language-text"><code>let dinner = {
+    getDrink() {
+        return '喝酒';
+    }
+};
+let breakfast = {
+    getDrink() {
+        return '喝水吧还是';
+    }
+};
+let sunday = Object.create(dinner);
+console.log(Object.getPrototypeOf(sunday) === dinner); // true
+Object.setPrototypeOf(sunday, breakfast);
+console.log(Object.getPrototypeOf(sunday) === breakfast) // true
+---------------------
+let sundays = {
+    __proto__: breakfast
+};
+console.log(sundays.getDrink()); // 喝水吧还是
+console.log(Object.getPrototypeOf(sundays) === breakfast) // true
+
+sundays.__proto__ = dinner;
+console.log(sundays.getDrink()); // 喝酒
+console.log(Object.getPrototypeOf(sundays) === dinner) // true
+
+---------------------
+let sundayss = {
+    __proto__: breakfast,
+    getDrink() {
+        return super.getDrink() + '我是新来的!!';
+    }
+};
+console.log(sundayss.getDrink()); // 喝水吧还是 我是新来的!!
+
+</code></pre></div><p>4.iterators 迭代器</p><div class="language- extra-class"><pre class="language-text"><code>function chef(foods) {
+    let i = 0;
+    return {
+        next() {
+            let done = (i &gt;= foods.length);
+            let value = !done ? foods[i++] : undefined;
+            return {
+                value: value,
+                done: done
+            }
+        }
+    }
+};
+let examples = chef(['a', 'b']);
+console.log(examples.next()); // value: 'a' done: false
+console.log(examples.next()); // value: 'b' done: false
+console.log(examples.next()); // value: undifined done: true
+</code></pre></div><p>5.generators生成器</p><div class="language- extra-class"><pre class="language-text"><code>function* chef() {
+    yield 'a'
+    yield 'b'
+};
+let chefs = chef();
+console.log(chefs.next()); // value: 'a' done: false
+console.log(chefs.next()); // value: 'b' done: false
+console.log(chefs.next()); // value: undefined done: true
+</code></pre></div><p>6.class 类</p><div class="language- extra-class"><pre class="language-text"><code>class Chef {
+    // 初始化用
+    constructor(food) { 
+        this.food = food;
+        this.dish = [];
+    }
+    // 1****
+    get menu() {
+        return this.dish;
+    }
+    set menu(dish) {
+        this.dish.push(dish);
+    }
+    // 2***
+    cook() {
+        console.log(this.food);
+    }
+    
+    // 3****静态方法static
+    static drink(foods) {
+        console.log(foods);
+    }
+};
+let chefs = new Chef('苹果');
+chefs.cook();
+chefs.menu = '橘子';
+chefs.menu = '香蕉';
+console.log(chefs.menu); // [&quot;橘子&quot;, &quot;香蕉&quot;]
+
+// 调取静态方法不需要实例化方法
+Chef.drink('我不需要new实例化哈哈！！');
+
+</code></pre></div><p>7.class 的继承</p><div class="language- extra-class"><pre class="language-text"><code>class Person {
+    constructor(name, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+    }
+    intro() {
+        return `${this.name}, ${this.birthday}`;
+    }
+};
+
+class Chef extends Person {
+    constructor(name, birthday) {
+        super(name, birthday);
+    }
+};
+
+let example = new Chef('我啊', '666');
+example.intro(); // &quot;我啊, 666&quot;
+
+</code></pre></div><p>8.set</p><div class="language- extra-class"><pre class="language-text"><code>let desserts = new Set('abc');
+desserts.add('d');
+console.log(desserts);
+
+// 长度
+console.log(desserts.size);
+
+// 判断是否存在
+console.log(desserts.has('a'));
+
+// 删除单个数据
+desserts.delete('d');
+console.log(desserts);
+
+// 清空所有数据
+desserts.clear();
+console.log(desserts);
+</code></pre></div><p>9.Map</p><div class="language- extra-class"><pre class="language-text"><code>let food = new Map();
+let fruit = {}, cook = function() {}, dessert = '甜点';
+
+food.set(fruit, '香蕉');
+food.set(cook, '苹果');
+food.set(dessert, '菠萝');
+
+console.log(food);
+console.log(food.size);
+console.log(food.get(fruit));
+console.log(food.get(cook));
+food.delete(dessert);
+console.log(food.has(dessert));
+
+food.forEach((value, key) =&gt; {
+    console.log(`${key}= ${value}`);
+});
+</code></pre></div><p>10.export 导出的几中方法</p><div class="language- extra-class"><pre class="language-text"><code>    function dinner(name) {
+        console.log(name);
+    };
+1. 
+    export default function dinner(name) {
+        console.log(name);
+    };
+    
+2. 
+    export default dinner;
+    
+3. 
+    export {dinner as default}; 
+    
+4. 
+    export {dinner};
+</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/pages/javascript/" class="prev router-link-active">
+          — js 目录 —
+        </a></span><span class="next"><a href="/pages/javascript/numSort.html">
+          js排序算法
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/app.c7e086f0.js" defer></script><script src="/assets/js/13.28310326.js" defer></script>
+  </body>
+</html>

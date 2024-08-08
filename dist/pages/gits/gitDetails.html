@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git | 蜗蜗🐇</title>
+    <meta name="description" content="从零开始一步一步飙起来">
+    <link rel="icon" href="/myIcon.ico">
+    
+    <link rel="preload" href="/assets/css/styles.c7e086f0.css" as="style"><link rel="preload" href="/assets/js/app.c7e086f0.js" as="script"><link rel="preload" href="/assets/js/10.999d289c.js" as="script"><link rel="prefetch" href="/assets/css/1.styles.68aee00d.css"><link rel="prefetch" href="/assets/css/2.styles.d1dddd6f.css"><link rel="prefetch" href="/assets/js/1.68aee00d.js"><link rel="prefetch" href="/assets/js/11.82756d16.js"><link rel="prefetch" href="/assets/js/12.65cc639e.js"><link rel="prefetch" href="/assets/js/13.28310326.js"><link rel="prefetch" href="/assets/js/14.806859aa.js"><link rel="prefetch" href="/assets/js/15.18a18ef2.js"><link rel="prefetch" href="/assets/js/16.c0969d6b.js"><link rel="prefetch" href="/assets/js/17.21096078.js"><link rel="prefetch" href="/assets/js/18.5b4893c3.js"><link rel="prefetch" href="/assets/js/19.da070b39.js"><link rel="prefetch" href="/assets/js/2.d1dddd6f.js"><link rel="prefetch" href="/assets/js/3.bd510fb8.js"><link rel="prefetch" href="/assets/js/4.32fa4d48.js"><link rel="prefetch" href="/assets/js/5.30c1c9c0.js"><link rel="prefetch" href="/assets/js/6.2abe4e41.js"><link rel="prefetch" href="/assets/js/7.0aac4afd.js"><link rel="prefetch" href="/assets/js/8.bb15a03e.js"><link rel="prefetch" href="/assets/js/9.c0befbf8.js">
+    <link rel="stylesheet" href="/assets/css/styles.c7e086f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      蜗蜗🐇
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/pages/resume/" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/pages/gits/" class="nav-link router-link-active">git</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link">js集</a></div><div class="nav-item"><a href="/pages/macConfig/" class="nav-link">mac配置小絮</a></div><div class="nav-item"><a href="/pages/toSumUp/" class="nav-link">小结</a></div><div class="nav-item"><a href="/pages/backstage/" class="nav-link">后端</a></div><a href="https://github.com/hxl888" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/pages/resume/" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/pages/gits/" class="nav-link router-link-active">git</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link">js集</a></div><div class="nav-item"><a href="/pages/macConfig/" class="nav-link">mac配置小絮</a></div><div class="nav-item"><a href="/pages/toSumUp/" class="nav-link">小结</a></div><div class="nav-item"><a href="/pages/backstage/" class="nav-link">后端</a></div><a href="https://github.com/hxl888" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/pages/gits/" aria-current="page" class="sidebar-link">— git 目录 —</a></li><li><a href="/pages/gits/gitDetails.html" aria-current="page" class="active sidebar-link">git</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/pages/gits/gitDetails.html#克隆" class="sidebar-link">克隆</a></li><li class="sidebar-sub-header"><a href="/pages/gits/gitDetails.html#分支" class="sidebar-link">分支</a></li><li class="sidebar-sub-header"><a href="/pages/gits/gitDetails.html#生成tag" class="sidebar-link">生成tag</a></li></ul></li><li><a href="/pages/gits/gitCommit.html" class="sidebar-link">git提交规范</a></li></ul></div><div class="page"><div class="content"><h1 id="git"><a href="#git" class="header-anchor">#</a> git</h1><p>拷贝ssh到服务器上</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>ssh-<span class="token function">copy-id</span> root@188<span class="token punctuation">.</span>131<span class="token punctuation">.</span>134<span class="token punctuation">.</span>233
+</code></pre></div><h1 id="http-justcoding-iteye-com-blog-1830388-（转载网址，非本人原创）"><a href="#http-justcoding-iteye-com-blog-1830388-（转载网址，非本人原创）" class="header-anchor">#</a> http://justcoding.iteye.com/blog/1830388 （转载网址，非本人原创）</h1><p>git 命令行设置</p><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token operator">/</span><span class="token operator">/</span>配置使用git仓库的人员姓名<span class="token punctuation">.</span>
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">&quot;Your Name Comes Here&quot;</span>  
+  
+<span class="token operator">/</span><span class="token operator">/</span>配置使用git仓库的人员email<span class="token punctuation">.</span>
+git config <span class="token operator">--</span>global user<span class="token punctuation">.</span>email you@yourdomain<span class="token punctuation">.</span>example<span class="token punctuation">.</span>com  
+  
+<span class="token operator">/</span><span class="token operator">/</span>配置到缓存 默认15分钟<span class="token punctuation">.</span> 
+git config <span class="token operator">--</span>global credential<span class="token punctuation">.</span>helper cache   
+  
+<span class="token operator">/</span><span class="token operator">/</span> 修改缓存时间<span class="token punctuation">.</span>  
+git config <span class="token operator">--</span>global credential<span class="token punctuation">.</span>helper <span class="token string">'cache --timeout=3600'</span>    
+  
+git config <span class="token operator">--</span>global color<span class="token punctuation">.</span>ui true  
+git config <span class="token operator">--</span>global alias<span class="token punctuation">.</span>co checkout  
+git config <span class="token operator">--</span>global alias<span class="token punctuation">.</span>ci commit  
+git config <span class="token operator">--</span>global alias<span class="token punctuation">.</span>st status  
+git config <span class="token operator">--</span>global alias<span class="token punctuation">.</span>br branch  
+git config <span class="token operator">--</span>global core<span class="token punctuation">.</span>editor <span class="token string">&quot;mate -w&quot;</span>
+</code></pre></div><p>查看、添加、提交、删除、找回，重置修改文件</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git help &lt;command&gt;  <span class="token operator">/</span><span class="token operator">/</span> 显示command的help<span class="token punctuation">.</span> 
+git show            <span class="token operator">/</span><span class="token operator">/</span> 显示某次提交的内容<span class="token punctuation">.</span>  
+git show <span class="token variable">$id</span> 
+   
+git co  <span class="token operator">--</span> &lt;file&gt;   <span class="token operator">/</span><span class="token operator">/</span> 抛弃工作区修改<span class="token punctuation">.</span>  
+git co  <span class="token punctuation">.</span>           <span class="token operator">/</span><span class="token operator">/</span> 抛弃工作区修改<span class="token punctuation">.</span>  
+   
+git add &lt;file&gt;      <span class="token operator">/</span><span class="token operator">/</span> 将工作文件修改提交到本地暂存区<span class="token punctuation">.</span>  
+git add <span class="token punctuation">.</span>           <span class="token operator">/</span><span class="token operator">/</span> 将所有修改过的工作文件提交暂存区<span class="token punctuation">.</span> 
+   
+git <span class="token function">rm</span> &lt;file&gt;       <span class="token operator">/</span><span class="token operator">/</span> 从版本库中删除文件<span class="token punctuation">.</span>  
+git <span class="token function">rm</span> &lt;file&gt; <span class="token operator">--</span>cached  <span class="token operator">/</span><span class="token operator">/</span> 从版本库中删除文件，但不删除文件<span class="token punctuation">.</span>  
+   
+git reset &lt;file&gt;    <span class="token operator">/</span><span class="token operator">/</span> 从暂存区恢复到工作文件<span class="token punctuation">.</span>  
+git reset <span class="token operator">--</span> <span class="token punctuation">.</span>      <span class="token operator">/</span><span class="token operator">/</span> 从暂存区恢复到工作文件<span class="token punctuation">.</span>  
+git reset <span class="token operator">--</span>hard    <span class="token operator">/</span><span class="token operator">/</span> 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改<span class="token punctuation">.</span>  
+   
+git ci &lt;file&gt;  
+git ci <span class="token punctuation">.</span>  
+git ci <span class="token operator">-</span>a           <span class="token operator">/</span><span class="token operator">/</span> 将git add<span class="token punctuation">,</span> git <span class="token function">rm</span>和git ci等操作都合并在一起做<span class="token punctuation">.</span>  
+git ci <span class="token operator">-</span>am <span class="token string">&quot;some comments&quot;</span>  
+git ci <span class="token operator">--</span>amend      <span class="token operator">/</span><span class="token operator">/</span> 修改最后一次提交记录<span class="token punctuation">.</span> 
+   
+git revert &lt;<span class="token variable">$id</span>&gt;    <span class="token operator">/</span><span class="token operator">/</span> 恢复某次提交的状态，恢复动作本身也创建了一次提交对象<span class="token punctuation">.</span>  
+git revert HEAD     <span class="token operator">/</span><span class="token operator">/</span> 恢复最后一次提交的状态<span class="token punctuation">.</span>  
+</code></pre></div><p>查看文件diff</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git <span class="token function">diff</span> &lt;file&gt;     <span class="token operator">/</span><span class="token operator">/</span> 比较当前文件和暂存区文件差异<span class="token punctuation">.</span>  
+git <span class="token function">diff</span>  
+git <span class="token function">diff</span> &lt;<span class="token variable">$id1</span>&gt; &lt;<span class="token variable">$id2</span>&gt;   <span class="token operator">/</span><span class="token operator">/</span> 比较两次提交之间的差异<span class="token punctuation">.</span>  
+git <span class="token function">diff</span> &lt;branch1&gt;<span class="token punctuation">.</span><span class="token punctuation">.</span>&lt;branch2&gt; <span class="token operator">/</span><span class="token operator">/</span> 在两个分支之间比较<span class="token punctuation">.</span>  
+git <span class="token function">diff</span> <span class="token operator">--</span>staged   <span class="token operator">/</span><span class="token operator">/</span> 比较暂存区和版本库差异<span class="token punctuation">.</span>  
+git <span class="token function">diff</span> <span class="token operator">--</span>cached   <span class="token operator">/</span><span class="token operator">/</span> 比较暂存区和版本库差异<span class="token punctuation">.</span>  
+git <span class="token function">diff</span> <span class="token operator">--</span>stat     <span class="token operator">/</span><span class="token operator">/</span> 仅仅比较统计信息<span class="token punctuation">.</span>  
+</code></pre></div><p>查看提交记录</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git log  
+git log &lt;file&gt;      <span class="token operator">/</span><span class="token operator">/</span> 查看该文件每次提交记录<span class="token punctuation">.</span>  
+git log <span class="token operator">-</span>p &lt;file&gt;   <span class="token operator">/</span><span class="token operator">/</span> 查看每次详细修改内容的<span class="token function">diff</span><span class="token punctuation">.</span> 
+git log <span class="token operator">-</span>p <span class="token operator">-</span>2       <span class="token operator">/</span><span class="token operator">/</span> 查看最近两次详细修改内容的<span class="token function">diff</span><span class="token punctuation">.</span>  
+git log <span class="token operator">--</span>stat      <span class="token operator">/</span><span class="token operator">/</span> 查看提交统计信息<span class="token punctuation">.</span>
+</code></pre></div><p>取得Git仓库</p><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token operator">/</span><span class="token operator">/</span> 初始化一个版本仓库<span class="token punctuation">.</span>
+git init  
+  
+<span class="token operator">/</span><span class="token operator">/</span> Clone远程版本库<span class="token punctuation">.</span>  
+git clone git@xbc<span class="token punctuation">.</span>me:wordpress<span class="token punctuation">.</span>git  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 添加远程版本库origin，语法<span class="token punctuation">.</span>
+git remote add <span class="token namespace">[shortname]</span> <span class="token namespace">[url]</span>  
+git remote add origin git@xbc<span class="token punctuation">.</span>me:wordpress<span class="token punctuation">.</span>git  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 查看远程仓库<span class="token punctuation">.</span>  
+git remote <span class="token operator">-</span>v  
+</code></pre></div><p>提交你的修改</p><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token operator">/</span><span class="token operator">/</span> 添加当前修改的文件到暂存区<span class="token punctuation">.</span>  
+git add <span class="token punctuation">.</span>  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件<span class="token punctuation">.</span>  
+git add <span class="token operator">-</span>u  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 提交你的修改  
+git commit –m <span class="token string">&quot;你的注释&quot;</span>  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 推送你的更新到远程服务器<span class="token punctuation">,</span>语法为 git push <span class="token punctuation">[</span>远程名<span class="token punctuation">]</span> <span class="token punctuation">[</span>本地分支<span class="token punctuation">]</span>:<span class="token punctuation">[</span>远程分支<span class="token punctuation">]</span><span class="token punctuation">.</span>  
+git push origin master  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 查看文件状态<span class="token punctuation">.</span>
+git status  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 跟踪新文件<span class="token punctuation">.</span>  
+git add readme<span class="token punctuation">.</span>txt  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 从当前跟踪列表移除文件，并完全删除<span class="token punctuation">.</span>  
+git <span class="token function">rm</span> readme<span class="token punctuation">.</span>txt  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 仅在暂存区删除，保留文件在当前目录，不再跟踪<span class="token punctuation">.</span>  
+git <span class="token function">rm</span> –cached readme<span class="token punctuation">.</span>txt  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 重命名文件<span class="token punctuation">.</span>  
+git <span class="token function">mv</span> reademe<span class="token punctuation">.</span>txt readme  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 查看提交的历史记录  
+git log  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 修改最后一次提交注释的，利用–amend参数<span class="token punctuation">.</span> 
+git commit <span class="token operator">--</span>amend  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 忘记提交某些修改，下面的三条命令只会得到一个提交<span class="token punctuation">.</span>  
+git commit –m &amp;quot<span class="token punctuation">;</span>add readme<span class="token punctuation">.</span>txt&amp;quot<span class="token punctuation">;</span>  
+git add readme_forgotten  
+git commit –amend  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 假设你已经使用git add <span class="token punctuation">.</span>，将修改过的文件a、b加到暂存区<span class="token punctuation">.</span>  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 现在你只想提交a文件，不想提交b文件，应该这样<span class="token punctuation">.</span>  
+git reset HEAD b  
+  
+<span class="token operator">/</span><span class="token operator">/</span> 取消对文件的修改  
+git checkout –<span class="token operator">-</span> readme<span class="token punctuation">.</span>txt  
+</code></pre></div><p>查看、切换、创建和删除分支</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git br <span class="token operator">-</span>r           <span class="token operator">/</span><span class="token operator">/</span> 查看远程分支<span class="token punctuation">.</span>  
+git br &lt;new_branch&gt; <span class="token operator">/</span><span class="token operator">/</span> 创建新的分支<span class="token punctuation">.</span>  
+git br <span class="token operator">-</span>v           <span class="token operator">/</span><span class="token operator">/</span> 查看各个分支最后提交信息<span class="token punctuation">.</span>  
+git br <span class="token operator">--</span>merged     <span class="token operator">/</span><span class="token operator">/</span> 查看已经被合并到当前分支的分支<span class="token punctuation">.</span> 
+git br <span class="token operator">--</span>no-merged  <span class="token operator">/</span><span class="token operator">/</span> 查看尚未被合并到当前分支的分支<span class="token punctuation">.</span> 
+   
+git co &lt;branch&gt;     <span class="token operator">/</span><span class="token operator">/</span> 切换到某个分支<span class="token punctuation">.</span>  
+git co <span class="token operator">-</span>b &lt;new_branch&gt; <span class="token operator">/</span><span class="token operator">/</span> 创建新的分支，并且切换过去<span class="token punctuation">.</span>  
+git co <span class="token operator">-</span>b &lt;new_branch&gt; &lt;branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 基于branch创建新的new_branch<span class="token punctuation">.</span>  
+   
+git co <span class="token variable">$id</span>          <span class="token operator">/</span><span class="token operator">/</span> 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除<span class="token punctuation">.</span> 
+git co <span class="token variable">$id</span> <span class="token operator">-</span>b &lt;new_branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 把某次历史提交记录checkout出来，创建成一个分支<span class="token punctuation">.</span>  
+   
+git br <span class="token operator">-</span>d &lt;branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 删除某个分支<span class="token punctuation">.</span>  
+git br <span class="token operator">-</span>D &lt;branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 强制删除某个分支 <span class="token punctuation">(</span>未被合并的分支被删除的时候需要强制<span class="token punctuation">)</span><span class="token punctuation">.</span>  
+</code></pre></div><p>分支合并和rebase</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git merge &lt;branch&gt;               <span class="token operator">/</span><span class="token operator">/</span> 将branch分支合并到当前分支<span class="token punctuation">.</span>  
+git merge origin/master <span class="token operator">--</span>no-ff  <span class="token operator">/</span><span class="token operator">/</span> 不要Fast-Foward合并，这样可以生成merge提交<span class="token punctuation">.</span>  
+   
+git rebase master &lt;branch&gt;       <span class="token operator">/</span><span class="token operator">/</span> 将master rebase到branch，相当于：<span class="token punctuation">.</span>  
+git co &lt;branch&gt; &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge &lt;branch&gt;  
+</code></pre></div><p>Git补丁管理(方便在多台机器上开发同步时用)</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git <span class="token function">diff</span> &gt; <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>sync<span class="token punctuation">.</span>patch         <span class="token operator">/</span><span class="token operator">/</span> 生成补丁<span class="token punctuation">.</span>  
+git apply <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>sync<span class="token punctuation">.</span>patch          <span class="token operator">/</span><span class="token operator">/</span> 打补丁<span class="token punctuation">.</span> 
+git apply <span class="token operator">--</span>check <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token operator">/</span>sync<span class="token punctuation">.</span>patch   <span class="token operator">/</span><span class="token operator">/</span> 测试补丁能否成功<span class="token punctuation">.</span> 
+</code></pre></div><p>Git暂存管理</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git stash                        <span class="token operator">/</span><span class="token operator">/</span> 暂存<span class="token punctuation">.</span> 
+git stash list                   <span class="token operator">/</span><span class="token operator">/</span> 列所有stash<span class="token punctuation">.</span> 
+git stash apply                  <span class="token operator">/</span><span class="token operator">/</span> 恢复暂存的内容<span class="token punctuation">.</span> 
+git stash drop                   <span class="token operator">/</span><span class="token operator">/</span> 删除暂存区<span class="token punctuation">.</span>  
+</code></pre></div><p>Git远程分支管理</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git pull                         <span class="token operator">/</span><span class="token operator">/</span> 抓取远程仓库所有分支更新并合并到本地<span class="token punctuation">.</span> 
+git pull <span class="token operator">--</span>no-ff                 <span class="token operator">/</span><span class="token operator">/</span> 抓取远程仓库所有分支更新并合并到本地，不要快进合并<span class="token punctuation">.</span> 
+git fetch origin                 <span class="token operator">/</span><span class="token operator">/</span> 抓取远程仓库更新<span class="token punctuation">.</span>
+git merge origin/master          <span class="token operator">/</span><span class="token operator">/</span> 将远程主分支合并到本地当前分支<span class="token punctuation">.</span> 
+git co <span class="token operator">--</span>track origin/branch     <span class="token operator">/</span><span class="token operator">/</span> 跟踪某个远程分支创建相应的本地分支<span class="token punctuation">.</span>  
+git co <span class="token operator">-</span>b &lt;local_branch&gt; origin/&lt;remote_branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 基于远程分支创建本地分支，功能同上<span class="token punctuation">.</span>  
+   
+git push                         <span class="token operator">/</span><span class="token operator">/</span> push所有分支<span class="token punctuation">.</span> 
+git push origin master           <span class="token operator">/</span><span class="token operator">/</span> 将本地主分支推到远程主分支<span class="token punctuation">.</span>  
+git push <span class="token operator">-</span>u origin master        <span class="token operator">/</span><span class="token operator">/</span> 将本地主分支推到远程<span class="token punctuation">(</span>如无远程主分支则创建，用于初始化远程仓库<span class="token punctuation">)</span><span class="token punctuation">.</span>  
+git push origin &lt;local_branch&gt;   <span class="token operator">/</span><span class="token operator">/</span> 创建远程分支， origin是远程仓库名<span class="token punctuation">.</span>
+git push origin &lt;local_branch&gt;:&lt;remote_branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 创建远程分支<span class="token punctuation">.</span>
+git push origin :&lt;remote_branch&gt;  <span class="token operator">/</span><span class="token operator">/</span> 先删除本地分支<span class="token punctuation">(</span>git br <span class="token operator">-</span>d &lt;branch&gt;<span class="token punctuation">)</span>，然后再push删除远程分支<span class="token punctuation">.</span>  
+</code></pre></div><p>基本的分支管理</p><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token comment">#创建一个分支  </span>
+git branch iss53  
+  
+<span class="token comment">#切换工作目录到iss53  </span>
+git chekcout iss53  
+  
+<span class="token comment">#将上面的命令合在一起，创建iss53分支并切换到iss53  </span>
+git chekcout –b iss53  
+  
+<span class="token comment">#合并iss53分支，当前工作目录为master  </span>
+git merge iss53  
+  
+<span class="token comment">#合并完成后，没有出现冲突，删除iss53分支  </span>
+git branch –d iss53  
+  
+<span class="token comment">#拉去远程仓库的数据，语法为 git fetch [remote-name]  </span>
+git fetch  
+  
+<span class="token comment">#fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并  </span>
+git pull  
+  
+<span class="token comment">#查看远程仓库的信息  </span>
+git remote show origin  
+  
+<span class="token comment">#建立本地的dev分支追踪远程仓库的develop分支  </span>
+git checkout –b dev origin/develop  
+</code></pre></div><p>Git远程仓库管理</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git remote <span class="token operator">-</span>v                    <span class="token operator">/</span><span class="token operator">/</span> 查看远程服务器地址和仓库名称  
+git remote show origin           <span class="token operator">/</span><span class="token operator">/</span> 查看远程服务器仓库状态  
+git remote add origin git@ github:robbin/robbin_site<span class="token punctuation">.</span>git         <span class="token operator">/</span><span class="token operator">/</span> 添加远程仓库地址  
+git remote <span class="token function">set-url</span> origin git@ github<span class="token punctuation">.</span>com:robbin/robbin_site<span class="token punctuation">.</span>git <span class="token operator">/</span><span class="token operator">/</span> 设置远程仓库地址<span class="token punctuation">(</span>用于修改远程仓库地址<span class="token punctuation">)</span>  
+git remote <span class="token function">rm</span> &lt;repository&gt;       <span class="token operator">/</span><span class="token operator">/</span> 删除远程仓库  
+</code></pre></div><p>创建远程仓库</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git clone <span class="token operator">--</span>bare robbin_site robbin_site<span class="token punctuation">.</span>git  <span class="token operator">/</span><span class="token operator">/</span> 用带版本的项目创建纯版本仓库  
+scp <span class="token operator">-</span>r my_project<span class="token punctuation">.</span>git git@ git<span class="token punctuation">.</span>csdn<span class="token punctuation">.</span>net:~      <span class="token operator">/</span><span class="token operator">/</span> 将纯仓库上传到服务器上  
+   
+mkdir robbin_site<span class="token punctuation">.</span>git &amp;&amp; cd robbin_site<span class="token punctuation">.</span>git &amp;&amp; git <span class="token operator">--</span>bare init <span class="token operator">/</span><span class="token operator">/</span> 在服务器创建纯仓库  
+git remote add origin git@ github<span class="token punctuation">.</span>com:robbin/robbin_site<span class="token punctuation">.</span>git    <span class="token operator">/</span><span class="token operator">/</span> 设置远程仓库地址  
+git push <span class="token operator">-</span>u origin master                                      <span class="token operator">/</span><span class="token operator">/</span> 客户端首次提交  
+git push <span class="token operator">-</span>u origin develop  <span class="token operator">/</span><span class="token operator">/</span> 首次将本地develop分支提交到远程develop分支，并且track  
+   
+git remote <span class="token function">set-head</span> origin master   <span class="token operator">/</span><span class="token operator">/</span> 设置远程仓库的HEAD指向master分支  
+</code></pre></div><div class="language-powershell extra-class"><pre class="language-powershell"><code>git branch <span class="token operator">--</span><span class="token function">set-upstream</span> master origin/master  
+git branch <span class="token operator">--</span><span class="token function">set-upstream</span> develop origin/develop  
+</code></pre></div><h1 id="以下为经常用到的"><a href="#以下为经常用到的" class="header-anchor">#</a> 以下为经常用到的====================</h1><h1 id="项目git应用"><a href="#项目git应用" class="header-anchor">#</a> 项目git应用</h1><h3 id="流程："><a href="#流程：" class="header-anchor">#</a> 流程：</h3><ol><li>在develop分支做开发；</li><li>develop要merge到主分支上，保持master为最新分支；</li><li>每次发版确定，根据需求打版开分支；</li><li>在上线没问题的情况下，对项目打tag版本标签，要保证与最新分支相同；</li><li>上线失败，回滚以版本稳定进行回滚</li></ol><h4 id="master-相当于develop，每次开发同步于此分支，就是最新的"><a href="#master-相当于develop，每次开发同步于此分支，就是最新的" class="header-anchor">#</a> master      相当于develop，每次开发同步于此分支，就是最新的</h4><h4 id="develop-在此分支开发"><a href="#develop-在此分支开发" class="header-anchor">#</a> develop     在此分支开发</h4><h4 id="pc-v3-0-确定上线分支打版-规范：-项目简称-v-大版本号-大模块添加-小的模块变动"><a href="#pc-v3-0-确定上线分支打版-规范：-项目简称-v-大版本号-大模块添加-小的模块变动" class="header-anchor">#</a> pc-v3.0.*   确定上线分支打版  规范：[项目简称]-v[大版本号].[大模块添加].[小的模块变动]</h4><h3 id="减少回滚："><a href="#减少回滚：" class="header-anchor">#</a> 减少回滚：</h3><ol><li>协商沟通好怎么分配；</li><li>每个人负责的项目不同；</li><li>模块化开发；</li></ol><h1 id="git-用法"><a href="#git-用法" class="header-anchor">#</a> git 用法</h1><h2 id="克隆"><a href="#克隆" class="header-anchor">#</a> 克隆</h2><div class="language-powershell extra-class"><pre class="language-powershell"><code>git clone giturl链接
+</code></pre></div><h2 id="分支"><a href="#分支" class="header-anchor">#</a> 分支</h2><ol><li><strong>查看分支</strong></li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git branch      <span class="token operator">/</span><span class="token operator">/</span> 查看本地分支<span class="token punctuation">.</span>
+git branch <span class="token operator">-</span>r   <span class="token operator">/</span><span class="token operator">/</span> 查看远程分支<span class="token punctuation">.</span>
+git branch <span class="token operator">-</span>a   <span class="token operator">/</span><span class="token operator">/</span> 查看所有分支<span class="token punctuation">.</span>
+git branch <span class="token operator">-</span>v   <span class="token operator">/</span><span class="token operator">/</span> 查看各个分支最后一个提交对象的信息<span class="token punctuation">.</span>
+</code></pre></div><ol start="2"><li><strong>新建/切换分支</strong></li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git branch branch_name                      <span class="token operator">/</span><span class="token operator">/</span> 本地新建分支<span class="token punctuation">.</span>
+git checkout branch_name                    <span class="token operator">/</span><span class="token operator">/</span> 切换分支<span class="token punctuation">.</span>
+git checkout <span class="token operator">-</span>b branch_name                 <span class="token operator">/</span><span class="token operator">/</span> 新建分支并切换到branch_name分支<span class="token punctuation">.</span>
+git push origin branch_name:branch_name     <span class="token operator">/</span><span class="token operator">/</span> 把本地分支提交远程   git push origin dev:master 把本地分支dev提交到远程master分支<span class="token punctuation">.</span>
+git checkout <span class="token operator">-</span>b branch_name origin/branch_name <span class="token operator">/</span><span class="token operator">/</span> 切换本地分支，与远程同步<span class="token punctuation">.</span>
+</code></pre></div><ol start="3"><li><strong>关联/跟踪分支</strong></li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token operator">/</span><span class="token operator">/</span> 跟踪dev<span class="token punctuation">.</span>
+git branch <span class="token operator">--</span><span class="token function">set-upstream</span><span class="token operator">-</span>to=origin/dev
+git branch <span class="token operator">--</span><span class="token function">set-upstream</span><span class="token operator">-</span>to=dev
+git push <span class="token operator">-</span>u origin dev  <span class="token operator">/</span><span class="token operator">/</span> 设置origin为默认主机，将本地的dev分支推送到origin主机<span class="token punctuation">.</span>
+<span class="token operator">/</span><span class="token operator">/</span> 取消对master的跟踪<span class="token punctuation">.</span>
+git branch <span class="token operator">--</span>unset-upstream master
+</code></pre></div><ol start="4"><li><strong>提交分支</strong></li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git add index<span class="token punctuation">.</span>html                  <span class="token operator">/</span><span class="token operator">/</span> 添加指定文件<span class="token punctuation">.</span>
+git add <span class="token punctuation">.</span>                           <span class="token operator">/</span><span class="token operator">/</span> 添加所有文件<span class="token punctuation">.</span>
+git commit <span class="token operator">-</span>m <span class="token string">'提交备注'</span>            <span class="token operator">/</span><span class="token operator">/</span> 提交备注<span class="token punctuation">.</span>
+git commit <span class="token operator">-</span>a <span class="token operator">-</span>m <span class="token string">'提交备注'</span>         <span class="token operator">/</span><span class="token operator">/</span> 添加并提交<span class="token punctuation">.</span>
+git push <span class="token namespace">[orgin master]</span>             <span class="token operator">/</span><span class="token operator">/</span> 推送<span class="token punctuation">.</span>
+</code></pre></div><ol start="5"><li><strong>合并分支</strong></li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git checkout master                 <span class="token operator">/</span><span class="token operator">/</span> 切换主分支master<span class="token punctuation">.</span>
+git merge dev                       <span class="token operator">/</span><span class="token operator">/</span> 把dev分支合并到matser分支<span class="token punctuation">.</span>
+git push origin master              <span class="token operator">/</span><span class="token operator">/</span> 推到远程<span class="token punctuation">.</span>
+<span class="token punctuation">|</span><span class="token punctuation">|</span>
+git push origin dev:master          <span class="token operator">/</span><span class="token operator">/</span> 把本地分支dev提交到远程master分支<span class="token punctuation">.</span>
+git checkout master                 <span class="token operator">/</span><span class="token operator">/</span> 切换到主分支master<span class="token punctuation">.</span>
+git pull origin master              <span class="token operator">/</span><span class="token operator">/</span> 把远程主分支master拉到本地<span class="token punctuation">.</span>
+</code></pre></div><ol start="6"><li><strong>删除远程分支</strong>（分两步）</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git branch <span class="token operator">-</span>r <span class="token operator">-</span>d orgin/分支名
+        <span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">-</span>r 查看远程分支<span class="token punctuation">.</span>
+        <span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">-</span>d 删除<span class="token punctuation">.</span>
+        <span class="token operator">/</span><span class="token operator">/</span> <span class="token operator">-</span>D 强制删除<span class="token punctuation">.</span>
+git push origin :branch_name <span class="token operator">/</span><span class="token operator">/</span> 或则 git push origin <span class="token operator">--</span>delete branch_name
+</code></pre></div><ol start="7"><li><strong>关于回滚</strong>
+本地</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token operator">/</span><span class="token operator">/</span> 撤销修改<span class="token punctuation">.</span>
+git checkout fileName
+git checkout <span class="token punctuation">.</span>
+
+<span class="token operator">/</span><span class="token operator">/</span> 取消缓存
+git add <span class="token punctuation">.</span>
+git status
+git reset HEAD fileName
+
+<span class="token operator">/</span><span class="token operator">/</span> 取消缓存，撤销修改<span class="token punctuation">.</span>
+git reset HEAD fileName
+git checkout fileName
+
+<span class="token operator">/</span><span class="token operator">/</span> 修改commit，不产生新的commit
+git add demo<span class="token punctuation">.</span>txt
+git commit <span class="token operator">--</span>amend <span class="token operator">-</span>m <span class="token string">'提交内容'</span>
+
+<span class="token operator">/</span><span class="token operator">/</span> 提交多个commit，想删除某个commit<span class="token punctuation">.</span>
+git reset <span class="token punctuation">[</span><span class="token operator">--</span>hard<span class="token punctuation">|</span>soft<span class="token punctuation">|</span>mixed<span class="token punctuation">|</span>merge<span class="token punctuation">|</span>keep<span class="token punctuation">]</span> <span class="token namespace">[commit|HEAD]</span>
+
+</code></pre></div><p>远程</p><div class="language-powershell extra-class"><pre class="language-powershell"><code><span class="token operator">/</span><span class="token operator">/</span> 撤销到指定commit<span class="token punctuation">.</span>
+git log fileName
+git checkout commitid fileName
+
+<span class="token operator">/</span><span class="token operator">/</span> 删除最后一次远程提交<span class="token punctuation">.</span>
+git revert HEAD
+git push origin master
+<span class="token punctuation">|</span><span class="token punctuation">|</span>
+git reset <span class="token operator">--</span>hard HEAD^
+git push origin master
+<span class="token operator">*</span> revert是放弃指定提交的修改，但是会生成一次新的提交，需要填写提交注释，以前的历史记录都在；
+<span class="token operator">*</span> reset是指将HEAD指针指到指定提交，历史记录中不会出现放弃的提交记录。
+
+<span class="token operator">/</span><span class="token operator">/</span> 回滚到某次提交
+git log
+git revert commitid
+</code></pre></div><p>删除某次提交</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git log <span class="token operator">--</span>oneline <span class="token operator">-</span>n5       <span class="token operator">/</span><span class="token operator">/</span> 查看远程近5条<span class="token punctuation">.</span>
+git rebase <span class="token operator">-</span>i <span class="token string">&quot;commitid&quot;</span>^   <span class="token operator">/</span><span class="token operator">/</span> 查看第几条到head<span class="token punctuation">.</span>
+进入编辑状态，删除要删除的行就可以
+git push origin master <span class="token operator">-</span>f   <span class="token operator">/</span><span class="token operator">/</span> 提交<span class="token punctuation">.</span>
+</code></pre></div><p>重命名分支</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git branch <span class="token operator">-</span>av
+git push <span class="token operator">--</span>delete origin 分支名
+git branch <span class="token operator">-</span>m 分支名 远程分支
+git push origin 远程分支
+git fetch <span class="token operator">-</span>p origin  修剪远程分支的本地“缓存”
+
+</code></pre></div><p>修剪远程分支的本地“缓存”</p><div class="language-powershell extra-class"><pre class="language-powershell"><code>git fetch <span class="token operator">-</span>p origin  
+
+</code></pre></div><ol start="8"><li><strong>其他</strong></li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git remote <span class="token operator">-</span>v       <span class="token operator">/</span><span class="token operator">/</span> 查看远程url<span class="token punctuation">.</span>
+git fetch           <span class="token operator">/</span><span class="token operator">/</span> 同步远程服务器上的数据到本地<span class="token punctuation">.</span>
+git log <span class="token operator">--</span>oneline <span class="token operator">-</span>n5 <span class="token operator">/</span><span class="token operator">/</span> 查看远程提交的近5条<span class="token punctuation">.</span>
+</code></pre></div><h2 id="生成tag"><a href="#生成tag" class="header-anchor">#</a> 生成tag</h2><ol><li>查看tag</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git tag
+git tag <span class="token operator">-</span>n              <span class="token operator">/</span><span class="token operator">/</span> 查看tag详情<span class="token punctuation">.</span>
+git tag <span class="token operator">-</span>l v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span><span class="token operator">*</span>       <span class="token operator">/</span><span class="token operator">/</span> 展现v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span><span class="token operator">*</span>下的所有版本，如v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1、v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>2、v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>3等<span class="token punctuation">.</span>
+</code></pre></div><ol start="2"><li>创建tag</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git tag v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1	 				<span class="token operator">/</span><span class="token operator">/</span> 直接版本，轻量级版本<span class="token punctuation">.</span>
+git tag <span class="token operator">-</span>a v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1 <span class="token operator">-</span>m <span class="token string">'备注内容'</span>	<span class="token operator">/</span><span class="token operator">/</span> 带详细信息的<span class="token punctuation">.</span>
+git tag <span class="token operator">-</span>s v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1 <span class="token operator">-</span>m <span class="token string">'备注内容'</span>	<span class="token operator">/</span><span class="token operator">/</span> 带签名的tag（需要有GPG私钥）<span class="token punctuation">.</span>
+git tag <span class="token operator">-</span>a v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1_patch 5ac6794	<span class="token operator">/</span><span class="token operator">/</span> 带commit的一次提交，也是打补丁，不要和上个版本名重复<span class="token punctuation">.</span>
+</code></pre></div><ol start="3"><li>删除tag</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git tag <span class="token operator">-</span>d  v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1
+git push origin :refs/tags/标签名
+</code></pre></div><ol start="4"><li>验证tag</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git tag <span class="token operator">-</span>v v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1				<span class="token operator">/</span><span class="token operator">/</span> 如果有GPG私钥可以验证<span class="token punctuation">.</span>
+</code></pre></div><ol start="5"><li>上传tag</li></ol><div class="language-powershell extra-class"><pre class="language-powershell"><code>git push origin v1<span class="token punctuation">.</span>0<span class="token punctuation">.</span>1			<span class="token operator">/</span><span class="token operator">/</span> 提交指定版本到远程<span class="token punctuation">.</span>
+git push origin <span class="token operator">--</span>tags			<span class="token operator">/</span><span class="token operator">/</span> 提交所有的本地tag到远程<span class="token punctuation">.</span>
+</code></pre></div><h3 id="关于git-stash的应用总结"><a href="#关于git-stash的应用总结" class="header-anchor">#</a> 关于git stash的应用总结</h3><div class="language-powershell extra-class"><pre class="language-powershell"><code>Step1
+
+　　新增 git stash save <span class="token operator">-</span>a <span class="token string">&quot;message&quot;</span> <span class="token operator">/</span><span class="token operator">/</span> 对于在项目里加入了代码新文件的开发来说，<span class="token operator">-</span>a选项才会将新加入的代码文件同时放入暂存区 类似于 git commit <span class="token operator">-</span>a <span class="token operator">-</span>m <span class="token string">&quot;&quot;</span>
+Step2
+
+　　查看列表 git stash list
+Step3
+
+　　应用的话是 git stash apply stash@<span class="token punctuation">{</span>id<span class="token punctuation">}</span> 
+Step4
+
+　　关于 git stash pop 也可以将list中最新的提取出来，但是不同于apply<span class="token punctuation">,</span> pop 会把list 中删除，后期不易恢复
+Step5
+
+　　如果真的git stash pop 了，也是可以恢复的。<span class="token operator">/</span><span class="token operator">/</span> git log <span class="token operator">--</span>graph <span class="token operator">--</span>oneline $<span class="token punctuation">(</span>git fsck <span class="token punctuation">|</span> awk <span class="token string">'/dangling commit/ {print $3}'</span><span class="token punctuation">)</span> 找到对应的commitId<span class="token punctuation">.</span>
+
+　　具体参考 http:<span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>jianshu<span class="token punctuation">.</span>com/p/9a316b546808
+Step6
+
+　　删除某个stash的话 git stash drop stash@<span class="token punctuation">{</span>id<span class="token punctuation">}</span> 
+Step7
+
+　　删除全部的stash list 直接通过 git stash clear
+
+
+</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/pages/gits/" class="prev router-link-active">
+          — git 目录 —
+        </a></span><span class="next"><a href="/pages/gits/gitCommit.html">
+          git提交规范
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/app.c7e086f0.js" defer></script><script src="/assets/js/10.999d289c.js" defer></script>
+  </body>
+</html>

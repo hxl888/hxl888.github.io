@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>js排序算法 | 蜗蜗🐇</title>
+    <meta name="description" content="从零开始一步一步飙起来">
+    <link rel="icon" href="/myIcon.ico">
+    
+    <link rel="preload" href="/assets/css/styles.c7e086f0.css" as="style"><link rel="preload" href="/assets/js/app.c7e086f0.js" as="script"><link rel="preload" href="/assets/js/14.806859aa.js" as="script"><link rel="prefetch" href="/assets/css/1.styles.68aee00d.css"><link rel="prefetch" href="/assets/css/2.styles.d1dddd6f.css"><link rel="prefetch" href="/assets/js/1.68aee00d.js"><link rel="prefetch" href="/assets/js/10.999d289c.js"><link rel="prefetch" href="/assets/js/11.82756d16.js"><link rel="prefetch" href="/assets/js/12.65cc639e.js"><link rel="prefetch" href="/assets/js/13.28310326.js"><link rel="prefetch" href="/assets/js/15.18a18ef2.js"><link rel="prefetch" href="/assets/js/16.c0969d6b.js"><link rel="prefetch" href="/assets/js/17.21096078.js"><link rel="prefetch" href="/assets/js/18.5b4893c3.js"><link rel="prefetch" href="/assets/js/19.da070b39.js"><link rel="prefetch" href="/assets/js/2.d1dddd6f.js"><link rel="prefetch" href="/assets/js/3.bd510fb8.js"><link rel="prefetch" href="/assets/js/4.32fa4d48.js"><link rel="prefetch" href="/assets/js/5.30c1c9c0.js"><link rel="prefetch" href="/assets/js/6.2abe4e41.js"><link rel="prefetch" href="/assets/js/7.0aac4afd.js"><link rel="prefetch" href="/assets/js/8.bb15a03e.js"><link rel="prefetch" href="/assets/js/9.c0befbf8.js">
+    <link rel="stylesheet" href="/assets/css/styles.c7e086f0.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      蜗蜗🐇
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/pages/resume/" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/pages/gits/" class="nav-link">git</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link router-link-active">js集</a></div><div class="nav-item"><a href="/pages/macConfig/" class="nav-link">mac配置小絮</a></div><div class="nav-item"><a href="/pages/toSumUp/" class="nav-link">小结</a></div><div class="nav-item"><a href="/pages/backstage/" class="nav-link">后端</a></div><a href="https://github.com/hxl888" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/pages/resume/" class="nav-link">个人简历</a></div><div class="nav-item"><a href="/pages/gits/" class="nav-link">git</a></div><div class="nav-item"><a href="/pages/javascript/" class="nav-link router-link-active">js集</a></div><div class="nav-item"><a href="/pages/macConfig/" class="nav-link">mac配置小絮</a></div><div class="nav-item"><a href="/pages/toSumUp/" class="nav-link">小结</a></div><div class="nav-item"><a href="/pages/backstage/" class="nav-link">后端</a></div><a href="https://github.com/hxl888" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><ul class="sidebar-links"><li><a href="/pages/javascript/" aria-current="page" class="sidebar-link">— js 目录 —</a></li><li><a href="/pages/javascript/es6.html" class="sidebar-link">es6</a></li><li><a href="/pages/javascript/numSort.html" aria-current="page" class="active sidebar-link">js排序算法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/pages/javascript/algorithm.html" class="sidebar-link">js 算法</a></li></ul></div><div class="page"><div class="content"><h1 id="js排序算法"><a href="#js排序算法" class="header-anchor">#</a> js排序算法</h1><h3 id="冒泡排序"><a href="#冒泡排序" class="header-anchor">#</a> 冒泡排序</h3><div class="language- extra-class"><pre class="language-text"><code>function bubbleSort(arr) {
+    var len = arr.length, a, b;
+    for (a = 0; a &lt; len; a++) {
+        for (b = 0; b &lt; len - a - 1; b++) {
+            if (arr[b] &gt; arr[b + 1]) {
+                [arr[b], arr[b + 1]] = [arr[b + 1], arr[b]];
+            }
+        }
+    }
+    return arr;
+}
+var a = [13,1,0,93,64,88,2,7,94,5,4];
+bubbleSort(a);
+</code></pre></div><h3 id="选择排序"><a href="#选择排序" class="header-anchor">#</a> 选择排序</h3><div class="language- extra-class"><pre class="language-text"><code>var selectionSort = function (arr) {
+  var len = arr.length, a, b, minIndex;
+  for (a = 0; a &lt; len - 1; a++) {
+   minIndex = a;
+      for (b = a + 1; b &lt; len; b++) {
+          if (arr[minIndex] &gt; arr[b]) minIndex = b;
+      }
+      if (minIndex !== a) [arr[minIndex], arr[a]] = [arr[a], arr[minIndex]];
+    }
+  return arr;
+}
+var a = [13,1,0,93,64,88,2,7,94,5,4];
+selectionSort(a);
+</code></pre></div><h3 id="插入排序"><a href="#插入排序" class="header-anchor">#</a> 插入排序</h3><div class="language- extra-class"><pre class="language-text"><code>function insertionSort(arr) {
+  var i,j,len = arr.length;
+  for(i = 1;i &lt; len; i++) {
+    for(j = 0; j &lt; i; j++) {
+      if(arr[j] &gt; arr[i]) {
+        arr.splice(j, 0, arr[i]);
+        arr.splice(i+1,1);
+      }
+    }
+  }
+  return arr;
+}
+var a = [13,1,0,93,64,88,2,7,94,5,4];
+insertionSort(a);
+</code></pre></div><h3 id="快速排序"><a href="#快速排序" class="header-anchor">#</a> 快速排序</h3><div class="language- extra-class"><pre class="language-text"><code>unction quickSort(arr) {
+  var len = arr.length;
+  if(len &lt;= 1) return arr;
+  var left = [], right = [], mid = arr[0];
+  for (var i = 1; i &lt; len; i++)
+    if (arr[i] &lt; mid)
+      left.push(arr[i]);
+    else
+      right.push(arr[i]);
+  return [...quickSort(left), mid, ...quickSort(right)];
+}
+var a = [13,1,0,93,64,88,2,7,94,5,4];
+quickSort(a);
+</code></pre></div><h3 id="获取最小值到最大值之前的整数随机数"><a href="#获取最小值到最大值之前的整数随机数" class="header-anchor">#</a> 获取最小值到最大值之前的整数随机数</h3><div class="language- extra-class"><pre class="language-text"><code>function GetRandomNum(Min, Max) {
+    var Range = Max - Min;
+    var Rand = Math.random();
+    return(Min + Math.round(Rand * Range));
+}
+var num = GetRandomNum(1, 10);
+console.log(num);
+</code></pre></div></div><div class="page-edit"><!----><!----></div><div class="page-nav"><p class="inner"><span class="prev">
+        ← <a href="/pages/javascript/es6.html" class="prev">
+          es6
+        </a></span><span class="next"><a href="/pages/javascript/algorithm.html">
+          js 算法
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/assets/js/app.c7e086f0.js" defer></script><script src="/assets/js/14.806859aa.js" defer></script>
+  </body>
+</html>
