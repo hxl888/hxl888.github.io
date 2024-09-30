@@ -68,7 +68,7 @@ features:
         <h3>工作经历</h3>
         <ul>
             <li>
-                <strong>公司名称:北京医保科技 </strong><br>职位: web前端 - 时间:2021.11-至今<br>
+                <strong>公司名称:北京医百科技有限公司 </strong><br>职位: web前端 - 时间:2021.11-2024.10<br>
                 职责描述:负责公司的前台界面、后台管理系统的开发维护以及中台组件的开发
             </li>
             <li>
@@ -82,6 +82,22 @@ features:
         </ul>
     </section>
     <h3>项目展示</h3>
+    <section>
+        <h4>北京医百科技有限公司</h4>
+        <ul>
+            <li>
+                <strong>后台管理系统、前台官网、公司内部通用组件</strong><br>
+                在线地址：https://www.100doc.com.cn  https://www.100mix.cn
+                工作职责以及技术汇总：<br>
+                1.移动端h5迭代开发<br>
+                2.pc端活动的迭代开发、公共组件的抽离<br>
+                3.新项目的搭建(vite、vue3、ant-design-vue、vuex | nuxt.js、element-plus/nuxt)<br>
+                4.使用腾讯云作为三方实现cdn图片、文件的托管<br>
+                5.公共组件开发为多个部门实现公用(登录)、im功能块(聊天、历史记录)<br>
+                使用微前端@micro-zoe/micro-app减轻主项目压力<br>
+            </li>
+        </ul>
+    </section>
     <section>
         <h4>腾讯音乐娱乐集团</h4>
         <ul>
