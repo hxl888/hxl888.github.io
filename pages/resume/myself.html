@@ -7,8 +7,8 @@
     <meta name="description" content="从零开始一步一步飙起来">
     <link rel="icon" href="/myIcon.ico">
     
-    <link rel="preload" href="/assets/css/styles.2579cc8e.css" as="style"><link rel="preload" href="/assets/js/app.2579cc8e.js" as="script"><link rel="preload" href="/assets/css/1.styles.205c07a1.css" as="style"><link rel="preload" href="/assets/js/1.205c07a1.js" as="script"><link rel="prefetch" href="/assets/css/2.styles.d1dddd6f.css"><link rel="prefetch" href="/assets/js/10.999d289c.js"><link rel="prefetch" href="/assets/js/11.82756d16.js"><link rel="prefetch" href="/assets/js/12.65cc639e.js"><link rel="prefetch" href="/assets/js/13.28310326.js"><link rel="prefetch" href="/assets/js/14.806859aa.js"><link rel="prefetch" href="/assets/js/15.18a18ef2.js"><link rel="prefetch" href="/assets/js/16.c0969d6b.js"><link rel="prefetch" href="/assets/js/17.21096078.js"><link rel="prefetch" href="/assets/js/18.5b4893c3.js"><link rel="prefetch" href="/assets/js/19.da070b39.js"><link rel="prefetch" href="/assets/js/2.d1dddd6f.js"><link rel="prefetch" href="/assets/js/3.bd510fb8.js"><link rel="prefetch" href="/assets/js/4.32fa4d48.js"><link rel="prefetch" href="/assets/js/5.30c1c9c0.js"><link rel="prefetch" href="/assets/js/6.2abe4e41.js"><link rel="prefetch" href="/assets/js/7.0aac4afd.js"><link rel="prefetch" href="/assets/js/8.bb15a03e.js"><link rel="prefetch" href="/assets/js/9.c0befbf8.js">
-    <link rel="stylesheet" href="/assets/css/styles.2579cc8e.css"><link rel="stylesheet" href="/assets/css/1.styles.205c07a1.css">
+    <link rel="preload" href="/assets/css/styles.ebf28de1.css" as="style"><link rel="preload" href="/assets/js/app.ebf28de1.js" as="script"><link rel="preload" href="/assets/css/1.styles.eb175ed5.css" as="style"><link rel="preload" href="/assets/js/1.eb175ed5.js" as="script"><link rel="prefetch" href="/assets/css/2.styles.d1dddd6f.css"><link rel="prefetch" href="/assets/js/10.999d289c.js"><link rel="prefetch" href="/assets/js/11.82756d16.js"><link rel="prefetch" href="/assets/js/12.65cc639e.js"><link rel="prefetch" href="/assets/js/13.28310326.js"><link rel="prefetch" href="/assets/js/14.806859aa.js"><link rel="prefetch" href="/assets/js/15.18a18ef2.js"><link rel="prefetch" href="/assets/js/16.c0969d6b.js"><link rel="prefetch" href="/assets/js/17.21096078.js"><link rel="prefetch" href="/assets/js/18.5b4893c3.js"><link rel="prefetch" href="/assets/js/19.da070b39.js"><link rel="prefetch" href="/assets/js/2.d1dddd6f.js"><link rel="prefetch" href="/assets/js/3.bd510fb8.js"><link rel="prefetch" href="/assets/js/4.32fa4d48.js"><link rel="prefetch" href="/assets/js/5.30c1c9c0.js"><link rel="prefetch" href="/assets/js/6.2abe4e41.js"><link rel="prefetch" href="/assets/js/7.0aac4afd.js"><link rel="prefetch" href="/assets/js/8.bb15a03e.js"><link rel="prefetch" href="/assets/js/9.c0befbf8.js">
+    <link rel="stylesheet" href="/assets/css/styles.ebf28de1.css"><link rel="stylesheet" href="/assets/css/1.styles.eb175ed5.css">
   </head>
   <body>
     <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
@@ -36,14 +36,16 @@
                 3.多个组协作要在同一项目进行开发 部署项目到开发、测试环境导致测试比较麻烦<br>
                 4.多个部门需要走同一个登录网关 各做各的需求导致工作量倍增问题<br>
                 5.业务中上传的图片、文件、视频太多导致服务器压力大、以及项目并行请求静态资源导致网络堵塞问题<br>
-                6.项目seo优化问题<br>
+                6.大文件上传受网络影响严重,经常容易上传失败,用户体验感不好<br>
+                7.项目seo优化问题<br>
                 项目成果:<br>
                 1.微前端架构：使用iframe、micro解决了老项目打包越来越大以及新项目技术升级壁垒的问题<br>
                 2.增加私服 单独开发不同组件发包到私服 各个部门npm引用(cos上传组件封装)<br>
                 3.增加多套开发、测试环境本地host代理不同服务<br>
                 4.抽离公共模块(登录组件、IM功能块)引入,各个部门只负责处理自己业务逻辑<br>
                 5.CDN托管：利用腾讯云实现图片、文件、视频的CDN托管减轻了服务器压力以及项目的加载速度<br>
-                6.使用nuxt服务端渲染、站点地图提升了seo优化问题<br></li></ul></section><section><h4>腾讯音乐娱乐集团</h4><ul><li>
+                6.使用切片上传、断点续传机制结局了大文件的上传失败问题<br>
+                7.使用nuxt服务端渲染、站点地图提升了seo优化问题<br></li></ul></section><section><h4>腾讯音乐娱乐集团</h4><ul><li>
               公司描述:拥有中国广受喜爱和独具匠心的音乐平台QQ音乐、酷狗音乐、酷我音乐和全民K歌<br>
                 在线地址：https://jx.kuwo.cn<br>
                 工作内容:<br>
@@ -78,6 +80,6 @@
             丰富兴趣：热爱生活，拥有广泛的兴趣爱好。<br>
             工作态度：以谨慎的工作作风和积极的态度，细心完成本职工作，踏实肯干，勤奋努力。<br>
             如果有幸被录用，我将全力以赴为贵公司创造效益，充分发挥自身能力和价值。<br></p></section></body></div><div class="page-edit"><!----><!----></div><!----></div></div></div>
-    <script src="/assets/js/app.2579cc8e.js" defer></script><script src="/assets/js/1.205c07a1.js" defer></script>
+    <script src="/assets/js/app.ebf28de1.js" defer></script><script src="/assets/js/1.eb175ed5.js" defer></script>
   </body>
 </html>
