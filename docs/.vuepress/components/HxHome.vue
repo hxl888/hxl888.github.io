@@ -1,0 +1,367 @@
+<template>
+  <div class="hh" id="hx-home">
+    <div class="hh-bg" aria-hidden="true"></div>
+
+    <section class="hh-hero">
+      <p class="hh-kicker">
+        <span class="hh-kicker__dot" aria-hidden="true"></span>
+        胡新磊 · 前端开发 · 北京
+      </p>
+
+      <div class="hh-avatar">
+        <img src="/face.png" alt="蜗蜗">
+      </div>
+
+      <h1 class="hh-brand">蜗蜗</h1>
+
+      <div class="hh-actions">
+        <a class="hh-btn hh-btn--primary" href="/resume.html">查看简历</a>
+        <a class="hh-btn hh-btn--ghost" href="/pages/javascript/">随便逛逛</a>
+      </div>
+    </section>
+
+    <section class="hh-now" aria-label="此刻">
+      <div class="hh-now__panel">
+        <div class="hh-now__left">
+          <p class="hh-now__label">NOW</p>
+          <h2>正在找前端岗位</h2>
+          <p>
+            中后台 / 微前端 / 性能与工程化都熟。
+            简历里的数字都能展开讲。
+          </p>
+          <a class="hh-mail" href="mailto:2653586693@qq.com">2653586693@qq.com</a>
+        </div>
+        <div class="hh-now__right">
+          <span v-for="t in tags" :key="t" class="hh-chip">{{ t }}</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="hh-foot">
+      <span>© 胡新磊 · 蜗蜗</span>
+      <a href="https://github.com/hxl888" target="_blank" rel="noopener">GitHub</a>
+    </footer>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HxHome',
+  data () {
+    return {
+      tags: ['Vue3', '微前端', 'TypeScript', '性能优化', '工程化', 'Lit']
+    }
+  },
+  mounted () {
+    document.documentElement.classList.add('hh-page')
+    if (!document.getElementById('hx-fonts')) {
+      const link = document.createElement('link')
+      link.id = 'hx-fonts'
+      link.rel = 'stylesheet'
+      link.href = 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Manrope:wght@400;500;600;700&family=Syne:wght@700;800&display=swap'
+      document.head.appendChild(link)
+    }
+  },
+  beforeDestroy () {
+    document.documentElement.classList.remove('hh-page')
+  }
+}
+</script>
+
+<style>
+html.hh-page .sidebar,
+html.hh-page .sidebar-button,
+html.hh-page .page-edit,
+html.hh-page .page-nav,
+html.hh-page .home .hero,
+html.hh-page .home .features,
+html.hh-page .home .footer {
+  display: none !important;
+}
+html.hh-page .page {
+  padding-left: 0 !important;
+}
+html.hh-page .content:not(.custom),
+html.hh-page .content {
+  max-width: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+html.hh-page .content > :first-child {
+  margin-top: 0 !important;
+}
+
+.hh {
+  --ink: #101820;
+  --ink-2: #3d4a5c;
+  --muted: #6a778a;
+  --line: #c9d4e3;
+  --accent: #1a5f7a;
+  --accent-ink: #134b61;
+  --font-display: "Syne", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --font-sans: "Manrope", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  position: relative;
+  width: 100%;
+  margin: 0;
+  min-height: calc(100vh - 58px);
+  padding: 24px clamp(18px, 4vw, 40px) 40px;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background: #e8eef5;
+}
+
+.hh-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(232, 238, 245, 0.9), rgba(232, 238, 245, 0.96)),
+    url('/back.jpg') center / cover no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hh-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(50% 40% at 85% 8%, rgba(26, 95, 122, 0.18), transparent 70%),
+    radial-gradient(40% 30% at 8% 25%, rgba(37, 99, 235, 0.1), transparent 65%);
+}
+
+.hh > *:not(.hh-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.hh a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hh-hero {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: clamp(28px, 7vh, 64px) 0 8px;
+  text-align: center;
+}
+
+.hh-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+
+.hh-kicker__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f05a28;
+  box-shadow: 0 0 0 0 rgba(240, 90, 40, 0.45);
+  animation: hh-pulse 1.8s ease-out infinite;
+}
+
+@keyframes hh-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(240, 90, 40, 0.45); }
+  70% { box-shadow: 0 0 0 9px rgba(240, 90, 40, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(240, 90, 40, 0); }
+}
+
+.hh-avatar {
+  width: 108px;
+  height: 108px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(200, 211, 226, 0.85),
+    0 16px 30px -16px rgba(16, 24, 32, 0.42);
+  background: #dfe8f2;
+}
+
+.hh-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hh-brand {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(52px, 10vw, 88px);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+}
+
+.hh-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.hh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: transform 0.18s, background 0.18s, border-color 0.18s;
+}
+
+.hh-btn:hover {
+  transform: translateY(-1px);
+}
+
+.content .hh a.hh-btn--primary,
+.hh a.hh-btn--primary {
+  background: var(--ink) !important;
+  color: #f4fffc !important;
+  box-shadow: 0 12px 28px -16px rgba(16, 24, 32, 0.7);
+}
+
+.content .hh a.hh-btn--primary:hover,
+.hh a.hh-btn--primary:hover {
+  background: var(--accent-ink) !important;
+}
+
+.content .hh a.hh-btn--ghost,
+.hh a.hh-btn--ghost {
+  background: rgba(255, 255, 255, 0.78) !important;
+  color: var(--ink) !important;
+  border-color: var(--line) !important;
+}
+
+.content .hh a.hh-btn--ghost:hover,
+.hh a.hh-btn--ghost:hover {
+  border-color: var(--accent) !important;
+  background: #fff !important;
+}
+
+/* NOW panel */
+.hh-now {
+  max-width: 820px;
+  margin: clamp(36px, 7vh, 56px) auto 0;
+}
+
+.hh-now__panel {
+  display: grid;
+  gap: 20px;
+  padding: 22px 22px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(200, 211, 226, 0.9);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 40px -28px rgba(14, 21, 32, 0.35);
+}
+
+@media (min-width: 760px) {
+  .hh-now__panel {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: end;
+    padding: 26px 28px;
+  }
+}
+
+.hh-now__label {
+  margin: 0 0 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent-ink);
+}
+
+.hh-now__left h2 {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hh-now__left p {
+  margin: 0;
+  max-width: 36ch;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.hh-mail {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-ink) !important;
+  border-bottom: 1px solid rgba(26, 95, 122, 0.35);
+}
+
+.hh-mail:hover {
+  border-bottom-color: var(--accent-ink);
+}
+
+.hh-now__right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hh-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(26, 95, 122, 0.1);
+  color: var(--accent-ink);
+}
+
+.hh-foot {
+  max-width: 820px;
+  margin: 28px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.content .hh .hh-foot a,
+.hh .hh-foot a {
+  color: var(--muted) !important;
+}
+
+.content .hh .hh-foot a:hover,
+.hh .hh-foot a:hover {
+  color: var(--accent-ink) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hh-kicker__dot {
+    animation: none;
+  }
+}
+</style>

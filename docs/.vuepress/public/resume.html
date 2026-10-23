@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>胡新磊 · 前端开发工程师</title>
+  <meta name="description" content="胡新磊，10 年前端。微前端、工程化与性能优化。北京。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+html, body { margin: 0; padding: 0; background: #e8edf3; }
+/* Resume is primarily served at /resume.html.
+   Keep styles under .hx so normal VuePress pages stay intact. */
+.hx {
+  --bg: #e8edf3;
+  --bg-deep: #d9e1ec;
+  --surface: #ffffff;
+  --ink: #12151a;
+  --ink-2: #3a4250;
+  --muted: #6b7585;
+  --line: #c5d0de;
+  --accent: #1a5f7a;
+  --accent-ink: #134b61;
+  --accent-soft: rgba(26, 95, 122, 0.12);
+  --signal: #e11d48;
+  --glow-a: rgba(26, 95, 122, 0.16);
+  --glow-b: rgba(37, 99, 235, 0.1);
+  --font-display: "Syne", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --font-sans: "Manrope", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --container: 1080px;
+  --radius: 20px;
+  --shadow: 0 1px 2px rgba(14, 21, 32, 0.04), 0 24px 48px -28px rgba(14, 21, 32, 0.28);
+
+  position: relative;
+  width: 100%;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.hx::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(55% 40% at 88% -5%, var(--glow-a), transparent 70%),
+    radial-gradient(45% 35% at -5% 10%, var(--glow-b), transparent 65%);
+}
+.hx > * {
+  position: relative;
+  z-index: 1;
+}
+.hx *,
+.hx *::before,
+.hx *::after {
+  box-sizing: border-box;
+}
+.hx a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* beat VuePress .content a color */
+.content .hx a.hx-btn--primary,
+.hx a.hx-btn--primary {
+  background: var(--ink) !important;
+  color: #f0f7fb !important;
+}
+.content .hx a.hx-btn--primary:hover,
+.hx a.hx-btn--primary:hover {
+  background: var(--accent-ink) !important;
+  color: #fff !important;
+}
+.content .hx a.hx-btn--ghost,
+.hx a.hx-btn--ghost,
+.content .hx button.hx-btn--ghost {
+  color: var(--ink) !important;
+  background: transparent;
+}
+.content .hx .hx-hero__meta a,
+.hx .hx-hero__meta a {
+  color: var(--ink-2) !important;
+}
+.content .hx .hx-hero__meta a:hover,
+.hx .hx-hero__meta a:hover {
+  color: var(--accent-ink) !important;
+}
+.content .hx .hx-project__links a,
+.hx .hx-project__links a {
+  color: var(--accent-ink) !important;
+}
+.content .hx .hx-contact a.hx-btn--primary,
+.hx .hx-contact a.hx-btn--primary {
+  background: #f0f7fb !important;
+  color: var(--ink) !important;
+}
+.content .hx .hx-contact a.hx-btn--ghost,
+.hx .hx-contact a.hx-btn--ghost,
+.content .hx .hx-contact button.hx-btn--ghost {
+  color: #eef4f8 !important;
+  border-color: rgba(238, 244, 248, 0.28);
+}
+.content .hx .hx-contact__facts a,
+.hx .hx-contact__facts a {
+  color: #f0f7fb !important;
+}
+.content .hx .hx-nav__links a,
+.hx .hx-nav__links a,
+.content .hx .hx-nav__text,
+.hx .hx-nav__text {
+  color: var(--ink-2) !important;
+}
+.content .hx .hx-nav__links a.is-active,
+.hx .hx-nav__links a.is-active,
+.content .hx .hx-nav__links a:hover,
+.hx .hx-nav__links a:hover,
+.content .hx .hx-nav__text:hover,
+.hx .hx-nav__text:hover {
+  color: var(--accent-ink) !important;
+}
+.content .hx .hx-nav__actions a.hx-btn--primary,
+.hx .hx-nav__actions a.hx-btn--primary {
+  background: var(--ink) !important;
+  color: #f0f7fb !important;
+}
+.hx ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hx p,
+.hx h1,
+.hx h2,
+.hx h3 {
+  margin: 0;
+}
+.hx .wrap {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(18px, 4vw, 36px);
+}
+
+/* sticky top — full-bleed bar, content stays in .wrap */
+.hx-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+  background: rgba(232, 237, 243, 0.92);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+.hx-nav.is-stuck {
+  border-bottom-color: var(--line);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 24px -20px rgba(18, 21, 26, 0.28);
+}
+.hx-nav__inner {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.hx-nav__text {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2) !important;
+  padding: 6px 4px;
+  transition: color 0.15s;
+}
+.hx-nav__text:hover {
+  color: var(--accent-ink) !important;
+}
+.hx-nav__actions .hx-btn--primary {
+  box-shadow: none;
+}
+.hx-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.hx-brand__mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: var(--accent);
+  color: #f0f7fb;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  box-shadow: 0 0 0 1px rgba(26, 95, 122, 0.35), 0 8px 20px -10px var(--accent);
+}
+.hx-brand__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  font-size: 14px;
+}
+.hx-brand__text small {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hx-nav__links {
+  display: none;
+  gap: 4px;
+}
+@media (min-width: 860px) {
+  .hx-nav__links {
+    display: flex;
+  }
+}
+.hx-nav__links a {
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  transition: background 0.2s, color 0.2s;
+}
+.hx-nav__links a:hover,
+.hx-nav__links a.is-active {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+.hx-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 650;
+  border-radius: 999px;
+  padding: 11px 18px;
+  transition: transform 0.2s, background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.hx-btn:hover {
+  transform: translateY(-1px);
+}
+.hx-btn--primary {
+  background: var(--ink);
+  color: #f0f7fb;
+  box-shadow: 0 10px 28px -14px rgba(14, 21, 32, 0.65);
+}
+.hx-btn--primary:hover {
+  background: var(--accent-ink);
+}
+.hx-btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+.hx-btn--ghost:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.hx-btn--sm {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+/* hero */
+.hx-hero {
+  padding: clamp(28px, 5vw, 48px) 0 clamp(40px, 7vw, 64px);
+}
+.hx-hero__frame {
+  position: relative;
+  padding: clamp(22px, 4vw, 36px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    linear-gradient(90deg, var(--accent) 0 4px, transparent 4px),
+    var(--surface);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.hx-hero__mark {
+  position: absolute;
+  right: clamp(8px, 3vw, 28px);
+  top: 50%;
+  transform: translateY(-55%);
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(120px, 22vw, 220px);
+  font-weight: 800;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: rgba(26, 95, 122, 0.08);
+  pointer-events: none;
+  user-select: none;
+}
+.hx-hero__top {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 20px;
+  margin-bottom: 16px;
+}
+.hx-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+.hx-eyebrow__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  animation: hx-pulse 1.8s ease-out infinite;
+}
+@keyframes hx-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.45); }
+  70% { box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+}
+.hx-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+.hx-hero__name {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(48px, 10vw, 84px);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+}
+.hx-hero__en {
+  position: relative;
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hx-hero__pitch {
+  position: relative;
+  margin: 18px 0 0;
+  max-width: 46ch;
+  color: var(--ink-2);
+  font-size: 15px;
+  line-height: 1.75;
+}
+.hx-hero__row {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 20px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.hx-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hx-hero__tags span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 0;
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
+}
+.hx-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  font-size: 13px;
+}
+.hx-hero__meta a {
+  font-weight: 700;
+  color: var(--ink) !important;
+  opacity: 0.72;
+}
+.hx-hero__meta a:hover {
+  opacity: 1;
+  color: var(--accent-ink) !important;
+}
+
+.hx-rail {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (min-width: 800px) {
+  .hx-rail {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+.hx-rail li {
+  display: grid;
+  gap: 6px;
+  padding: 16px 14px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hx-rail li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.hx-rail time {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--accent);
+}
+.hx-rail strong {
+  font-size: 15px;
+  font-weight: 750;
+}
+.hx-rail span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* sections */
+.hx-section {
+  padding: 28px 0 64px;
+}
+.hx-section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.hx-section__index {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-ink);
+  letter-spacing: 0.14em;
+}
+.hx-section__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.hx-section__desc {
+  max-width: 42ch;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* strengths */
+.hx-strengths {
+  display: grid;
+  gap: 14px;
+}
+@media (min-width: 800px) {
+  .hx-strengths {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hx-strengths article:first-child {
+    grid-column: 1 / -1;
+  }
+}
+.hx-strength {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 22px 20px;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+.hx-strength:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.hx-strength__num {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-ink);
+  margin-bottom: 10px;
+}
+.hx-strength h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.hx-strength p {
+  color: var(--ink-2);
+  font-size: 14.5px;
+}
+.hx-metric {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+
+/* skills */
+.hx-skills {
+  display: grid;
+  gap: 12px;
+}
+@media (min-width: 760px) {
+  .hx-skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hx-skill {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface) 88%, white);
+  padding: 18px 18px 16px;
+}
+.hx-skill__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.hx-skill__top h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+.hx-skill__top span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.hx-skill__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.hx-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(14, 21, 32, 0.06);
+  color: var(--ink-2);
+}
+.hx-tag--hot {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 600;
+}
+.hx-skill ul {
+  display: grid;
+  gap: 6px;
+}
+.hx-skill li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 13.5px;
+  color: var(--ink-2);
+}
+.hx-skill li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* experience */
+.hx-exp-rail {
+  position: relative;
+  display: grid;
+  gap: 0;
+}
+.hx-exp-rail::before {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent), #2f5cb4, var(--signal));
+  opacity: 0.45;
+}
+@media (min-width: 720px) {
+  .hx-exp-rail::before {
+    left: 119px;
+  }
+}
+.hx-exp {
+  position: relative;
+  padding: 0 0 36px 36px;
+}
+@media (min-width: 720px) {
+  .hx-exp {
+    display: grid;
+    grid-template-columns: 108px 1fr;
+    gap: 24px;
+    padding-left: 0;
+  }
+}
+.hx-exp::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+  z-index: 1;
+}
+@media (min-width: 720px) {
+  .hx-exp::before {
+    left: 113px;
+  }
+}
+.hx-exp__time {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  padding-top: 4px;
+}
+.hx-exp__body {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 20px 16px;
+}
+.hx-exp__body h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.hx-exp__org {
+  font-size: 14px;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.hx-exp__summary {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.hx-exp__body ul {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.hx-exp__body li {
+  font-size: 14px;
+  color: var(--ink-2);
+  padding-left: 0;
+}
+.hx-exp__body li strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+.hx-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.hx-chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+}
+
+/* projects */
+.hx-projects {
+  display: grid;
+  gap: 16px;
+}
+.hx-project {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 22px;
+  overflow: hidden;
+  position: relative;
+}
+.hx-project::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-a), transparent 70%);
+  pointer-events: none;
+}
+.hx-project__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+.hx-project__meta .dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--line);
+}
+.hx-project h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  position: relative;
+}
+.hx-project > p {
+  color: var(--ink-2);
+  font-size: 14.5px;
+  max-width: 70ch;
+  margin-bottom: 14px;
+  position: relative;
+}
+.hx-project ul {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+  position: relative;
+}
+.hx-project li {
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.hx-project li::before {
+  content: "→ ";
+  color: var(--accent-ink);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+.hx-project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+}
+.hx-project__links a {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--accent-ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.hx-project__links a:hover {
+  color: var(--ink);
+}
+
+/* contact */
+.hx-contact {
+  margin-bottom: 48px;
+  border-radius: 24px;
+  padding: clamp(28px, 5vw, 44px);
+  background:
+    linear-gradient(135deg, rgba(26, 95, 122, 0.35), rgba(37, 99, 235, 0.18)),
+    var(--ink);
+  color: #eef4f8;
+  box-shadow: var(--shadow);
+}
+.hx-contact h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+.hx-contact p {
+  max-width: 48ch;
+  color: rgba(238, 244, 248, 0.78);
+  margin-bottom: 22px;
+}
+.hx-contact__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.hx-contact .hx-btn--primary {
+  background: #f0f7fb;
+  color: var(--ink);
+}
+.hx-contact .hx-btn--ghost {
+  border-color: rgba(238, 244, 248, 0.28);
+  color: #eef4f8;
+}
+.hx-contact .hx-btn--ghost:hover {
+  background: rgba(238, 244, 248, 0.1);
+  border-color: #f0f7fb;
+}
+.hx-contact__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-size: 13px;
+  color: rgba(238, 244, 248, 0.7);
+}
+.hx-contact__facts strong {
+  color: #f0f7fb;
+  font-weight: 650;
+}
+
+.hx-footer {
+  padding: 0 0 40px;
+  font-size: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+@media print {
+  .sidebar,
+  .navbar,
+  .hx-nav__actions,
+  .no-print {
+    display: none !important;
+  }
+  .hx {
+    width: 100%;
+    margin: 0;
+    background: #fff;
+  }
+  .hx-nav {
+    position: static;
+  }
+  .hx-strength,
+  .hx-exp__body,
+  .hx-project {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+  .hx-contact {
+    background: #111 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hx-eyebrow__dot {
+    animation: none !important;
+  }
+}
+  </style>
+</head>
+<body>
+<div class="hx" id="hx-resume">
+  <div class="hx-nav" id="hx-nav">
+    <div class="wrap hx-nav__inner">
+      <a class="hx-brand" href="#top" aria-label="胡新磊">
+        <span class="hx-brand__mark">HX</span>
+        <span class="hx-brand__text">
+          胡新磊
+          <small>frontend · 10 yrs</small>
+        </span>
+      </a>
+      <nav class="hx-nav__links" aria-label="页面导航">
+        <a href="#strengths">优势</a>
+        <a href="#skills">技能</a>
+        <a href="#experience">经历</a>
+        <a href="#work">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <div class="hx-nav__actions">
+        <a class="hx-nav__text no-print" href="/">回博客</a>
+        <a class="hx-btn hx-btn--primary hx-btn--sm no-print" href="/hxl-resume.pdf" download="胡新磊简历.pdf">存为 PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hx-hero wrap" id="top">
+      <div class="hx-hero__frame">
+        <p class="hx-hero__mark" aria-hidden="true">10</p>
+        <div class="hx-hero__top">
+          <p class="hx-eyebrow"><span class="hx-eyebrow__dot" aria-hidden="true"></span> 求职中 · 北京 · 随时到岗</p>
+          <div class="hx-hero__stats">
+            <span>33 岁</span>
+            <span>本科 · 河北大学</span>
+          </div>
+        </div>
+
+        <h1 class="hx-hero__name">胡新磊</h1>
+        <p class="hx-hero__en">HU XINLEI · Frontend Engineer</p>
+
+        <p class="hx-hero__pitch">
+          生鲜 B2B → 腾讯音乐酷我 → 医疗 SaaS → 国美「真快乐」。
+          微前端解耦、组件私服、IM / 统一登录；指标有数字，面试能展开。
+        </p>
+
+        <div class="hx-hero__row">
+          <div class="hx-hero__tags">
+            <span>微前端</span>
+            <span>工程化</span>
+            <span>性能</span>
+            <span>Vue / TS</span>
+          </div>
+          <div class="hx-hero__meta">
+            <a href="mailto:2653586693@qq.com">邮箱</a>
+            <a href="tel:13261559984">电话</a>
+            <a href="#work">项目</a>
+            <a href="#experience">经历</a>
+          </div>
+        </div>
+      </div>
+
+      <ol class="hx-rail" aria-label="工作轨迹">
+        <li>
+          <time>16</time>
+          <strong>鲜易</strong>
+          <span>B2B / 支付</span>
+        </li>
+        <li>
+          <time>18</time>
+          <strong>腾讯音乐</strong>
+          <span>酷我直播</span>
+        </li>
+        <li>
+          <time>21</time>
+          <strong>医百</strong>
+          <span>SaaS / IM</span>
+        </li>
+        <li>
+          <time>25</time>
+          <strong>通通智能</strong>
+          <span>真快乐</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="hx-section wrap" id="strengths">
+      <div class="hx-section__head">
+        <div>
+          <p class="hx-section__index">01 — STRENGTHS</p>
+          <h2 class="hx-section__title">个人优势</h2>
+        </div>
+        <p class="hx-section__desc">架构、性能、工程化与复杂问题 —— 每条都能在面试里展开讲证据。</p>
+      </div>
+      <div class="hx-strengths">
+        <article class="hx-strength">
+          <p class="hx-strength__num">01</p>
+          <h3>前端架构设计 · 微前端可落地</h3>
+          <p>精通 Vue2/Vue3 及 Vuex/Pinia，具备微前端与企业级项目架构经验。可主导业务模块化拆分与微前端改造，实现模块解耦、独立迭代，提升团队协作效率。</p>
+          <span class="hx-metric">micro-app · 模块解耦 · 独立部署</span>
+        </article>
+        <article class="hx-strength">
+          <p class="hx-strength__num">02</p>
+          <h3>性能优化实践 · 全链路可量化</h3>
+          <p>理解浏览器渲染与 Vue 响应式机制，擅长从构建打包、资源加载、运行时做全链路优化。电商核心页首屏平均提升 40%；医疗 SaaS 首屏加载平均降低 64%。</p>
+          <span class="hx-metric">首屏 ↑40% · SaaS 首屏 ↓64%</span>
+        </article>
+        <article class="hx-strength">
+          <p class="hx-strength__num">03</p>
+          <h3>工程化与组件建设</h3>
+          <p>熟练 Webpack / Vite、Git 协作与 CI/CD。主导过企业级公共组件库与 NPM 封装，动态表单方案接入 5+ 内部系统，减少约 70% 重复代码。</p>
+          <span class="hx-metric">NPM 私服 · 重复代码 ↓70%</span>
+        </article>
+        <article class="hx-strength">
+          <p class="hx-strength__num">04</p>
+          <h3>复杂问题与 AI 辅助研发</h3>
+          <p>能处理跨端兼容、微前端集成、线上稳定性等问题。熟悉 AI 辅助开发工具链，结合智能生成、自动补全与自动化测试，提升编码与排查效率。</p>
+          <span class="hx-metric">跨端协议 · IM · 统一登录</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="hx-section wrap" id="skills">
+      <div class="hx-section__head">
+        <div>
+          <p class="hx-section__index">02 — SKILLS</p>
+          <h2 class="hx-section__title">专业技能</h2>
+        </div>
+        <p class="hx-section__desc">加粗为能独立交付；每条对应简历中的项目证据。</p>
+      </div>
+      <div class="hx-skills">
+        <article class="hx-skill">
+          <div class="hx-skill__top"><h3>前端框架</h3><span>Vue / React / Lit</span></div>
+          <div class="hx-skill__tags">
+            <span class="hx-tag hx-tag--hot">Vue2 / Vue3</span>
+            <span class="hx-tag hx-tag--hot">TypeScript</span>
+            <span class="hx-tag">Pinia / Vuex</span>
+            <span class="hx-tag">React</span>
+            <span class="hx-tag">Lit / Web Components</span>
+            <span class="hx-tag">Nuxt</span>
+          </div>
+          <ul>
+            <li>主导 Vue3 生态迁移与模块化改造；Lit + Shadow DOM 做统一登录组件</li>
+            <li>Element Plus / Element UI、动态表单 + Zod 强类型校验</li>
+          </ul>
+        </article>
+        <article class="hx-skill">
+          <div class="hx-skill__top"><h3>架构与工程化</h3><span>微前端 / 构建</span></div>
+          <div class="hx-skill__tags">
+            <span class="hx-tag hx-tag--hot">micro-app</span>
+            <span class="hx-tag hx-tag--hot">Vite / Webpack</span>
+            <span class="hx-tag">Rollup</span>
+            <span class="hx-tag">NPM 私服</span>
+            <span class="hx-tag">CI/CD</span>
+          </div>
+          <ul>
+            <li>医疗 SaaS 单体 → micro-app 拆分，独立部署与样式 / 路由隔离</li>
+            <li>组件库 Rollup 打包、Tree-Shaking、按需引入与 API 文档</li>
+          </ul>
+        </article>
+        <article class="hx-skill">
+          <div class="hx-skill__top"><h3>性能与实时</h3><span>加载 / IM</span></div>
+          <div class="hx-skill__tags">
+            <span class="hx-tag hx-tag--hot">CDN / 预加载</span>
+            <span class="hx-tag hx-tag--hot">WebSocket</span>
+            <span class="hx-tag">Service Worker</span>
+            <span class="hx-tag">IndexedDB</span>
+          </div>
+          <ul>
+            <li>构建优化、资源预加载、路由懒加载与代码分割</li>
+            <li>医疗 IM：心跳重连、离线推送、本地缓存，日均 10 万+ 消息</li>
+          </ul>
+        </article>
+        <article class="hx-skill">
+          <div class="hx-skill__top"><h3>业务与低代码</h3><span>电商 / CMS</span></div>
+          <div class="hx-skill__tags">
+            <span class="hx-tag hx-tag--hot">低代码 CMS</span>
+            <span class="hx-tag">JSON Schema</span>
+            <span class="hx-tag">JSBridge</span>
+            <span class="hx-tag">微信支付</span>
+          </div>
+          <ul>
+            <li>可视化页面构建器、拖拽编辑与模板版本管理</li>
+            <li>H5 ↔ 原生协议；支付成功率 78% → 98%</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="hx-section wrap" id="experience">
+      <div class="hx-section__head">
+        <div>
+          <p class="hx-section__index">03 — EXPERIENCE</p>
+          <h2 class="hx-section__title">工作经历</h2>
+        </div>
+        <p class="hx-section__desc">B2B 商城 → 腾讯音乐 → 医疗 SaaS → 真快乐社交电商。</p>
+      </div>
+      <div class="hx-exp-rail">
+        <article class="hx-exp">
+          <p class="hx-exp__time">2025.01 — 至今</p>
+          <div class="hx-exp__body">
+            <h3>前端开发工程师</h3>
+            <p class="hx-exp__org">海南通通智能科技有限公司 · 国美旗下「真快乐」社交电商</p>
+            <p class="hx-exp__summary">牵头平台前端技术体系与用户体验全链路优化，负责 Web / H5 核心业务落地与跨团队协作，支撑日均十万级访问。</p>
+            <ul>
+              <li><strong>【核心业务】</strong>主导 Web / H5 核心模块开发、重构与性能调优，落地构建优化与资源预加载，核心页首屏平均提升 40%。</li>
+              <li><strong>【架构升级】</strong>负责新项目选型与架构设计，牵头老旧项目向 Vue3 生态迁移与模块化改造，提升迭代效率。</li>
+              <li><strong>【协作交付】</strong>担任前端核心接口人，推动产品 / 后端 / 测试评审、联调、测试标准化，保障核心项目准时交付。</li>
+            </ul>
+            <div class="hx-chips">
+              <span class="hx-chip">Vue3</span>
+              <span class="hx-chip">H5</span>
+              <span class="hx-chip">性能优化</span>
+              <span class="hx-chip">低代码 CMS</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hx-exp">
+          <p class="hx-exp__time">2021.10 — 2024.10</p>
+          <div class="hx-exp__body">
+            <h3>前端开发工程师</h3>
+            <p class="hx-exp__org">北京医百科技有限公司 · 医疗数字化 SaaS</p>
+            <p class="hx-exp__summary">主导前端架构升级与企业级通用能力建设，覆盖医疗 IM、SaaS、动态表单等，服务全国 20+ 医疗机构。</p>
+            <ul>
+              <li><strong>【微前端】</strong>引入 micro-app 重构医疗 SaaS 单体，业务解耦与独立部署，首屏加载平均降低 64%。</li>
+              <li><strong>【医疗 IM】</strong>基于 WebSocket + Service Worker 重构即时通讯，日均 10 万+ 消息零丢包，支撑医患 / 医护沟通。</li>
+              <li><strong>【组件与表单】</strong>动态表单配置平台与公共组件库封装为 NPM 包，接入 5+ 内部系统，减少约 70% 重复代码。</li>
+            </ul>
+            <div class="hx-chips">
+              <span class="hx-chip">Vue3</span>
+              <span class="hx-chip">micro-app</span>
+              <span class="hx-chip">TypeScript</span>
+              <span class="hx-chip">WebSocket</span>
+              <span class="hx-chip">Nuxt</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hx-exp">
+          <p class="hx-exp__time">2018.11 — 2021.09</p>
+          <div class="hx-exp__body">
+            <h3>前端开发工程师</h3>
+            <p class="hx-exp__org">腾讯音乐（北京）有限公司 · 酷我 / 聚星直播</p>
+            <p class="hx-exp__summary">服务酷我音乐、聚星直播等产品线，负责直播业务前端重构、跨端协议与后台管理系统。</p>
+            <ul>
+              <li><strong>【业务重构】</strong>直播间活动页 JSP → Vue，路由懒加载与代码分割，打包体积减少 80%，首屏提升 70%。</li>
+              <li><strong>【跨端协议】</strong>牵头设计 H5 与原生客户端交互协议，标准化通信，支撑 5 场以上大型运营活动。</li>
+              <li><strong>【审核后台】</strong>直播审核系统：HLS 分片播放、ECharts 看板、审核规则与 AES-256 敏感数据加密。</li>
+            </ul>
+            <div class="hx-chips">
+              <span class="hx-chip">Vue</span>
+              <span class="hx-chip">React</span>
+              <span class="hx-chip">JSBridge</span>
+              <span class="hx-chip">ECharts</span>
+              <span class="hx-chip">videojs-hls</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hx-exp">
+          <p class="hx-exp__time">2016.04 — 2018.10</p>
+          <div class="hx-exp__body">
+            <h3>前端开发工程师</h3>
+            <p class="hx-exp__org">北京鲜易网络科技有限公司 · 生鲜 B2B</p>
+            <p class="hx-exp__summary">聚焦生鲜 B2B 电商前端，独立负责微信商城核心模块与支付体验优化。</p>
+            <ul>
+              <li><strong>【微信商城】</strong>独立完成核心页面与微信支付 SDK 全流程集成，支付成功率 78% → 98%。</li>
+              <li><strong>【体验优化】</strong>图片懒加载、Swiper 交互优化，解决移动端加载慢与卡顿；保障交易系统稳定性与兼容性。</li>
+            </ul>
+            <div class="hx-chips">
+              <span class="hx-chip">Vue2</span>
+              <span class="hx-chip">Mint-UI</span>
+              <span class="hx-chip">Swiper</span>
+              <span class="hx-chip">微信支付</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <article class="hx-exp" style="margin-top:8px">
+        <p class="hx-exp__time">2011 — 2015</p>
+        <div class="hx-exp__body">
+          <h3>河北大学 · 本科</h3>
+          <p class="hx-exp__org">工商企业管理</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="hx-section wrap" id="work">
+      <div class="hx-section__head">
+        <div>
+          <p class="hx-section__index">04 — PROJECTS</p>
+          <h2 class="hx-section__title">项目经历</h2>
+        </div>
+        <p class="hx-section__desc">统一登录、低代码 CMS、医疗表单 / IM / 微前端，以及腾讯音乐与鲜易交付。</p>
+      </div>
+      <div class="hx-projects">
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>通通智能 · 前端</span><span class="dot" aria-hidden="true"></span><span>2025.05 — 2025.08</span>
+          </div>
+          <h3>统一登录认证平台</h3>
+          <p>为集团多业务线（电商 / 医疗 / 内容）打造统一登录，解决登录体系不互通、第三方 SDK 兼容差、响应慢，支撑日均 10 万+ 跨端登录。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Lit</span>
+            <span class="hx-tag hx-tag--hot">TypeScript</span>
+            <span class="hx-tag">Web Components</span>
+            <span class="hx-tag">Shadow DOM</span>
+            <span class="hx-tag">Rollup</span>
+          </div>
+          <ul>
+            <li>主导 Lit 架构选型与组件分层规范；开发登录弹窗、验证码组件，集成 3 家以上第三方登录 SDK</li>
+            <li>攻克 Shadow DOM 下第三方 SDK 样式隔离与接口兼容；登录响应 200ms → 50ms（↑75%），验证成功率 95%</li>
+            <li>多系统登录互通，减少各业务线重复开发约 60%</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>通通智能 · 前端</span><span class="dot" aria-hidden="true"></span><span>2025.01 — 2025.03</span>
+          </div>
+          <h3>企业级低代码 CMS 内容管理系统</h3>
+          <p>为「真快乐」社交电商打造低代码 CMS，支撑多业务线可视化搭建营销 / 内容页并快速发布。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Vue</span>
+            <span class="hx-tag">Element UI</span>
+            <span class="hx-tag">Vue-draggable</span>
+            <span class="hx-tag">JSON Schema</span>
+          </div>
+          <ul>
+            <li>主导可视化页面构建器：拖拽编辑、实时预览、属性配置面板与动态表单双向绑定</li>
+            <li>基础组件库 + JSON Schema 定义属性与行为；模板创建 / 复用 / 版本管理 / 共享分发</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>医百 · 前端</span><span class="dot" aria-hidden="true"></span><span>2023.05 — 2023.08</span>
+          </div>
+          <h3>医百 · 动态表单</h3>
+          <p>可复用动态表单方案，解决医疗业务表单重复开发、配置繁琐、校验不规范。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Vue3</span>
+            <span class="hx-tag hx-tag--hot">TypeScript</span>
+            <span class="hx-tag">Element Plus</span>
+            <span class="hx-tag">Zod</span>
+            <span class="hx-tag">Rollup</span>
+          </div>
+          <ul>
+            <li>可视化表单配置器 + JSON Schema 映射字段；Zod 强类型校验与跨字段联动</li>
+            <li>封装为 NPM 私服包，按需引入与 Tree-Shaking，接入多个内部系统</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>医百 · 前端负责人</span><span class="dot" aria-hidden="true"></span><span>2023.02 — 2023.04</span>
+          </div>
+          <h3>医百 · 导播台展示官网</h3>
+          <p>医疗会议 / 直播 / 导播一体化品牌官网，解决首屏慢、SEO 差、模块耦合高。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Nuxt</span>
+            <span class="hx-tag">Vue3</span>
+            <span class="hx-tag">Element Plus</span>
+            <span class="hx-tag">Pinia</span>
+          </div>
+          <ul>
+            <li>Nuxt SSR + CDN 预加载 + 动态路由微加载；首屏 3.8s → 1.2s，SEO 收录率提升 90%</li>
+            <li>日均访问 5 万+，成为核心获客渠道</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>医百 · 核心开发</span><span class="dot" aria-hidden="true"></span><span>2022.10 — 2023.01</span>
+          </div>
+          <h3>医百 · IM 智能即时通讯</h3>
+          <p>医疗机构专属 IM，解决医护 / 医患沟通延迟、丢包与数据隐私问题。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">WebSocket</span>
+            <span class="hx-tag">Service Worker</span>
+            <span class="hx-tag">IndexedDB</span>
+          </div>
+          <ul>
+            <li>聊天核心能力 + IM SDK 私服；心跳检测、重连、离线推送与本地缓存</li>
+            <li>TLS + 令牌动态验证；日均 10 万+ 消息，覆盖 20+ 合作医疗机构</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>医百 · 核心开发</span><span class="dot" aria-hidden="true"></span><span>2022.04 — 2022.10</span>
+          </div>
+          <h3>医百 SaaS · 租户前台</h3>
+          <p>医疗健康 SaaS 租户前台，支撑全国百余家机构的个性化租户需求。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Vue3</span>
+            <span class="hx-tag hx-tag--hot">micro-app</span>
+            <span class="hx-tag">Element Plus</span>
+          </div>
+          <ul>
+            <li>微前端拆分与独立部署；解决应用通信、样式隔离、路由跳转</li>
+            <li>首屏 4.2s → 1.5s，公共组件复用率约 90%，支持 100+ 机构个性化配置</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>腾讯音乐 · 前端</span><span class="dot" aria-hidden="true"></span><span>2019.03 — 2019.11</span>
+          </div>
+          <h3>酷我 · 周期娱乐榜 / 直播审核后台</h3>
+          <p>老旧 JSP 活动页重构与直播内容审核后台，支撑大型运营与审核效率。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Vue MPA</span>
+            <span class="hx-tag">React</span>
+            <span class="hx-tag">ECharts</span>
+            <span class="hx-tag">videojs-hls</span>
+          </div>
+          <ul>
+            <li>周期榜 JSP → Vue MPA，构建优化 + CDN；活动页访问速度提升约 70%</li>
+            <li>审核后台 HLS 分片播放降 CPU、数据看板与 AES-256 敏感数据加密</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>鲜易 · 前端</span><span class="dot" aria-hidden="true"></span><span>2016.05 — 2016.09</span>
+          </div>
+          <h3>鲜易网 · 微信商城</h3>
+          <p>生鲜 B2B 微信商城：商品展示与微信支付全流程，提升订单转化。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Vue2</span>
+            <span class="hx-tag">Mint-UI</span>
+            <span class="hx-tag">微信支付 SDK</span>
+          </div>
+          <ul>
+            <li>独立完成核心页面与支付集成；LocalStorage 缓存减少重复请求</li>
+            <li>攻克多机型 / 微信版本兼容与支付回调问题</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="hx-contact">
+        <h2>如果你想聊聊</h2>
+        <p>
+          正在找北京的前端岗位。微前端、性能、组件工程化、IM / 登录中台 ——
+          简历与 PDF 里的数字都能在面试里展开讲。
+        </p>
+        <div class="hx-contact__row">
+          <a class="hx-btn hx-btn--primary" href="mailto:2653586693@qq.com">发邮件</a>
+          <a class="hx-btn hx-btn--ghost" href="tel:13261559984">打电话</a>
+          <a class="hx-btn hx-btn--ghost no-print" href="/hxl-resume.pdf" download="胡新磊简历.pdf">下载 PDF</a>
+          <button class="hx-btn hx-btn--ghost no-print" type="button" id="hx-copy-mail">复制邮箱</button>
+        </div>
+        <div class="hx-contact__facts">
+          <span>求职意向：<strong>前端开发工程师</strong></span>
+          <span>期望城市：<strong>北京</strong></span>
+          <span>经验：<strong>10 年</strong></span>
+        </div>
+      </div>
+      <p class="hx-footer">
+        <span>© 胡新磊 · Frontend Resume</span>
+        <span>synced from 胡新磊简历.pdf</span>
+      </p>
+    </section>
+  </main>
+</div>
+<script>
+
+(function () {
+  var nav = document.getElementById('hx-nav');
+  var links = nav ? nav.querySelectorAll('.hx-nav__links a') : [];
+  var sections = ['strengths', 'skills', 'experience', 'work', 'contact']
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  var raf = null;
+  function onScroll() {
+    if (raf) return;
+    raf = requestAnimationFrame(function () {
+      raf = null;
+      if (nav) nav.classList.toggle('is-stuck', window.scrollY > 8);
+      var current = '';
+      var y = window.scrollY + 96;
+      sections.forEach(function (sec) { if (sec.offsetTop <= y) current = sec.id; });
+      Array.prototype.forEach.call(links, function (a) {
+        a.classList.toggle('is-active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  var copyBtn = document.getElementById('hx-copy-mail');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var mail = '2653586693@qq.com';
+      var done = function () {
+        var old = copyBtn.textContent;
+        copyBtn.textContent = '已复制';
+        setTimeout(function () { copyBtn.textContent = old; }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(mail).then(done).catch(done);
+      } else done();
+    });
+  }
+})();
+
+</script>
+</body>
+</html>

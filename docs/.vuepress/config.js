@@ -1,7 +1,7 @@
 module.exports = {
     base: '/',
-    title: '蜗蜗🐇',
-    description: '从零开始一步一步飙起来',
+    title: '蜗蜗',
+    description: '胡新磊的前端笔记与简历 · 从零开始，一步一步飙起来',
     dest: 'dist',
     head: [
         ['link', { rel: 'icon', href: '/myIcon.ico' }]
@@ -17,33 +17,20 @@ module.exports = {
                 link: '/'
             },
             {
-                text: '个人简历',
-                link: '/pages/resume/'
-            },
-            {
-                text: 'git',
-                link: '/pages/gits/'
-            },
-            {
-                text: 'js集',
-                link: '/pages/javascript/'
-            },
-            {
-                text: 'mac配置小絮',
-                link: '/pages/macConfig/'
-            },
-            {
-                text: '小结',
-                link: '/pages/toSumUp/'
-            },
-            {
-                text: '后端',
-                link: '/pages/backstage/'
+                text: '笔记',
+                items: [
+                    { text: 'Git', link: '/pages/gits/' },
+                    { text: 'JS 集', link: '/pages/javascript/' },
+                    { text: 'Mac 配置', link: '/pages/macConfig/' },
+                    { text: '小结', link: '/pages/toSumUp/' },
+                    { text: '后端', link: '/pages/backstage/' }
+                ]
             }
         ],
         sidebar: {
             '/pages/resume/': [
                 '',
+                'myself'
             ],
             '/pages/gits/': [
                 '',

@@ -1,57 +1,53 @@
-$accentColor = #3eaf7c // 主题色
-$textColor = #2c3e50 // 文字颜色
-$borderColor = #eaecef // 边框颜色
-$codeBgColor = #282c34 // 代码背景颜色
-// -webkit-animation:change 3s linear infinite
+$accentColor = #0b9e9a
+$textColor = #0e1520
+$borderColor = #c8d3e2
+$codeBgColor = #1a2230
 
-.m-mainBox
-  position: relative;
-  min-height: 500px;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  .m-tit
-    text-align: center;
-    font-size: 36px;
-  img 
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    z-index: 6;
-    position:absolute; 
-    left:0;
-    top: 10%;
-    &.m-face
-      -webkit-animation:changeFace 5s linear infinite forwards
-    &.m-back
-      backface-visibility: hidden;
-      -webkit-animation:changeBack 5s linear infinite forwards
-  .m-background
-    position: absolute;
-    left: 50%;
-    top: 0;
-    margin-left: -190px;
-    width: 380px;
-    height: 380px;
-    z-index: 5;
-    -webkit-animation: circle 10s linear infinite;
-    background: url('/m-background.png') no-repeat center;
-    background-size: 100% 100%;
+.navbar
+  background-color rgba(247, 249, 252, 0.92)
+  -webkit-backdrop-filter blur(14px) saturate(1.2)
+  backdrop-filter blur(14px) saturate(1.2)
+  border-bottom 1px solid rgba(200, 211, 226, 0.65)
+  box-shadow none
 
-@keyframes changeFace
-  from
-    -webkit-transform:rotateY(0deg)
-  to
-    -webkit-transform:rotateY(360deg)
+.navbar .site-name
+  font-weight 700
+  letter-spacing -0.02em
+  color #0e1520
 
-@keyframes changeBack
-  from
-    -webkit-transform:rotateY(360deg)
-  to
-    -webkit-transform:rotateY(0deg)
+.nav-links
+  a
+    font-weight 600
+    font-size 0.92rem
+  .router-link-active
+    color $accentColor
 
-@keyframes circle
-  from
-    -webkit-transform:rotateZ(0deg)
-  to
-    -webkit-transform:rotateZ(360deg)
+/* dropdown — cleaner panel */
+.nav-links .dropdown-wrapper
+  .dropdown-title
+    font-weight 600
+  .nav-dropdown
+    min-width 168px
+    padding 0.45rem 0
+    border 1px solid #c8d3e2
+    border-radius 12px
+    background #fff
+    box-shadow 0 16px 36px -20px rgba(14, 21, 32, 0.35)
+    margin-top 0.35rem
+    .dropdown-item > a
+      padding 0.55rem 1.15rem
+      font-weight 500
+      color #3a4556
+      &:hover
+        color $accentColor
+        background rgba(11, 158, 154, 0.08)
+      &.router-link-active
+        color $accentColor
+        font-weight 650
+        &::after
+          border-left-color $accentColor
+
+/* homepage: softer top bar */
+html.hh-page .navbar
+  background-color rgba(232, 238, 245, 0.78)
+  border-bottom-color transparent
