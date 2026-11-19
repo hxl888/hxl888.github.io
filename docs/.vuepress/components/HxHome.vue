@@ -49,7 +49,7 @@ export default {
   name: 'HxHome',
   data () {
     return {
-      tags: ['Vue3', '微前端', 'TypeScript', '性能优化', '工程化', 'Lit']
+      tags: ['Vue3', '微前端', 'TypeScript', '性能优化', '工程化', 'AI 辅助', 'Lit']
     }
   },
   mounted () {

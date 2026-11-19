@@ -357,18 +357,22 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
 .hx-hero__name {
   position: relative;
   margin: 0;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(48px, 10vw, 84px);
-  line-height: 0.92;
-  letter-spacing: -0.045em;
+  max-width: max-content;
+  padding-bottom: 2px;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", var(--font-sans);
+  font-weight: 500;
+  font-size: clamp(32px, 5.2vw, 44px);
+  line-height: 1.28;
+  letter-spacing: 0.22em;
+  color: var(--accent-ink);
 }
 .hx-hero__en {
   position: relative;
-  margin: 10px 0 0;
+  margin: 6px 0 0;
   font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -973,6 +977,7 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span>微前端</span>
             <span>工程化</span>
             <span>性能</span>
+            <span>AI 辅助</span>
             <span>Vue / TS</span>
           </div>
           <div class="hx-hero__meta">
@@ -1014,31 +1019,37 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
           <p class="hx-section__index">01 — STRENGTHS</p>
           <h2 class="hx-section__title">个人优势</h2>
         </div>
-        <p class="hx-section__desc">架构、性能、工程化与复杂问题 —— 每条都能在面试里展开讲证据。</p>
+        <p class="hx-section__desc">按最新简历：AI 辅助、架构、性能、工程化与复杂问题 —— 每条都能展开讲证据。</p>
       </div>
       <div class="hx-strengths">
         <article class="hx-strength">
           <p class="hx-strength__num">01</p>
-          <h3>前端架构设计 · 微前端可落地</h3>
-          <p>精通 Vue2/Vue3 及 Vuex/Pinia，具备微前端与企业级项目架构经验。可主导业务模块化拆分与微前端改造，实现模块解耦、独立迭代，提升团队协作效率。</p>
-          <span class="hx-metric">micro-app · 模块解耦 · 独立部署</span>
+          <h3>AI 辅助研发</h3>
+          <p>熟悉 AI 辅助开发工具链，能结合代码智能生成、自动补全与自动化测试，提升日常编码与问题排查效率，支撑敏捷开发。</p>
+          <span class="hx-metric">智能生成 · 自动补全 · 自动化测试</span>
         </article>
         <article class="hx-strength">
           <p class="hx-strength__num">02</p>
-          <h3>性能优化实践 · 全链路可量化</h3>
-          <p>理解浏览器渲染与 Vue 响应式机制，擅长从构建打包、资源加载、运行时做全链路优化。电商核心页首屏平均提升 40%；医疗 SaaS 首屏加载平均降低 64%。</p>
-          <span class="hx-metric">首屏 ↑40% · SaaS 首屏 ↓64%</span>
+          <h3>前端架构设计 · 微前端可落地</h3>
+          <p>精通 Vue2/Vue3 及 Vuex/Pinia 状态管理，具备微前端、企业级项目架构设计经验。可主导业务模块化拆分与微前端改造，实现模块解耦、独立迭代，提升团队协作效率。</p>
+          <span class="hx-metric">micro-app · 模块解耦 · 独立部署</span>
         </article>
         <article class="hx-strength">
           <p class="hx-strength__num">03</p>
-          <h3>工程化与组件建设</h3>
-          <p>熟练 Webpack / Vite、Git 协作与 CI/CD。主导过企业级公共组件库与 NPM 封装，动态表单方案接入 5+ 内部系统，减少约 70% 重复代码。</p>
-          <span class="hx-metric">NPM 私服 · 重复代码 ↓70%</span>
+          <h3>性能优化实践 · 全链路可量化</h3>
+          <p>理解浏览器渲染原理与 Vue 响应式机制，擅长从构建打包、资源加载、运行时等维度做全链路性能优化。电商核心页首屏平均提升 40%；医疗 SaaS 首屏加载平均降低 64%。</p>
+          <span class="hx-metric">首屏 ↑40% · SaaS 首屏 ↓64%</span>
         </article>
         <article class="hx-strength">
           <p class="hx-strength__num">04</p>
-          <h3>复杂问题与 AI 辅助研发</h3>
-          <p>能处理跨端兼容、微前端集成、线上稳定性等问题。熟悉 AI 辅助开发工具链，结合智能生成、自动补全与自动化测试，提升编码与排查效率。</p>
+          <h3>工程化与组件建设</h3>
+          <p>熟练使用 Webpack、Vite，掌握 Git 协作与 CI/CD 部署流程。主导过企业级公共组件库建设与 NPM 封装，动态表单方案接入 5+ 内部系统，减少约 70% 重复代码。</p>
+          <span class="hx-metric">NPM 私服 · 重复代码 ↓70%</span>
+        </article>
+        <article class="hx-strength">
+          <p class="hx-strength__num">05</p>
+          <h3>复杂问题解决</h3>
+          <p>具备较强的问题定位与调试能力，能处理跨端兼容、微前端集成、线上稳定性等复杂技术问题，保障项目平稳运行。</p>
           <span class="hx-metric">跨端协议 · IM · 统一登录</span>
         </article>
       </div>
@@ -1217,7 +1228,7 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
           <p class="hx-section__index">04 — PROJECTS</p>
           <h2 class="hx-section__title">项目经历</h2>
         </div>
-        <p class="hx-section__desc">统一登录、低代码 CMS、医疗表单 / IM / 微前端，以及腾讯音乐与鲜易交付。</p>
+        <p class="hx-section__desc">统一登录、低代码 CMS、医疗表单 / IM / 微前端 / 官网，以及腾讯音乐与鲜易交付。</p>
       </div>
       <div class="hx-projects">
         <article class="hx-project">
@@ -1235,8 +1246,8 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
           </div>
           <ul>
             <li>主导 Lit 架构选型与组件分层规范；开发登录弹窗、验证码组件，集成 3 家以上第三方登录 SDK</li>
-            <li>攻克 Shadow DOM 下第三方 SDK 样式隔离与接口兼容；登录响应 200ms → 50ms（↑75%），验证成功率 95%</li>
-            <li>多系统登录互通，减少各业务线重复开发约 60%</li>
+            <li>攻克 Shadow DOM 下第三方 SDK 样式隔离与接口兼容；Rollup 按需加载，登录响应 200ms → 50ms（↑75%），验证成功率 95%</li>
+            <li>多系统登录互通，减少各业务线重复开发约 60%；跨端登录体验满意度提升约 80%</li>
           </ul>
         </article>
 
@@ -1245,16 +1256,18 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span>通通智能 · 前端</span><span class="dot" aria-hidden="true"></span><span>2025.01 — 2025.03</span>
           </div>
           <h3>企业级低代码 CMS 内容管理系统</h3>
-          <p>为「真快乐」社交电商打造低代码 CMS，支撑多业务线可视化搭建营销 / 内容页并快速发布。</p>
+          <p>为「真快乐」社交电商打造低代码 CMS，解决传统开发效率低、跨端适配难、业务迭代慢，支撑多业务线可视化搭建营销 / 内容页并快速发布。</p>
           <div class="hx-skill__tags" style="margin-bottom:14px">
             <span class="hx-tag hx-tag--hot">Vue</span>
             <span class="hx-tag">Element UI</span>
             <span class="hx-tag">Vue-draggable</span>
             <span class="hx-tag">JSON Schema</span>
+            <span class="hx-tag">HTML2Canvas</span>
           </div>
           <ul>
             <li>主导可视化页面构建器：拖拽编辑、实时预览、属性配置面板与动态表单双向绑定</li>
-            <li>基础组件库 + JSON Schema 定义属性与行为；模板创建 / 复用 / 版本管理 / 共享分发</li>
+            <li>基础组件库 + JSON Schema 定义属性与行为；动态表单引擎与模板创建 / 复用 / 版本管理 / 共享分发</li>
+            <li>保障跨端兼容与组件化标准，缩短页面构建与内容更新周期，支撑多业务线搭建需求</li>
           </ul>
         </article>
 
@@ -1263,7 +1276,7 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span>医百 · 前端</span><span class="dot" aria-hidden="true"></span><span>2023.05 — 2023.08</span>
           </div>
           <h3>医百 · 动态表单</h3>
-          <p>可复用动态表单方案，解决医疗业务表单重复开发、配置繁琐、校验不规范。</p>
+          <p>可复用动态表单方案，解决医疗业务表单重复开发、配置繁琐、校验不规范，覆盖多类医疗业务场景。</p>
           <div class="hx-skill__tags" style="margin-bottom:14px">
             <span class="hx-tag hx-tag--hot">Vue3</span>
             <span class="hx-tag hx-tag--hot">TypeScript</span>
@@ -1272,8 +1285,8 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span class="hx-tag">Rollup</span>
           </div>
           <ul>
-            <li>可视化表单配置器 + JSON Schema 映射字段；Zod 强类型校验与跨字段联动</li>
-            <li>封装为 NPM 私服包，按需引入与 Tree-Shaking，接入多个内部系统</li>
+            <li>负责整体架构与公共组件库；可视化表单配置器 + JSON Schema 映射字段，适配医疗多样化表单</li>
+            <li>集成 Zod 强类型校验与跨字段联动；Rollup 封装 NPM 私服包，按需引入与 Tree-Shaking，接入多个内部系统</li>
           </ul>
         </article>
 
@@ -1290,8 +1303,8 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span class="hx-tag">Pinia</span>
           </div>
           <ul>
-            <li>Nuxt SSR + CDN 预加载 + 动态路由微加载；首屏 3.8s → 1.2s，SEO 收录率提升 90%</li>
-            <li>日均访问 5 万+，成为核心获客渠道</li>
+            <li>主导 Nuxt SSR 选型与公共模块；CDN 预加载 + 动态路由微加载；Pinia 重构全局状态</li>
+            <li>首屏 3.8s → 1.2s，SEO 收录率提升 90%；日均访问 5 万+，成为核心获客渠道</li>
           </ul>
         </article>
 
@@ -1300,15 +1313,15 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span>医百 · 核心开发</span><span class="dot" aria-hidden="true"></span><span>2022.10 — 2023.01</span>
           </div>
           <h3>医百 · IM 智能即时通讯</h3>
-          <p>医疗机构专属 IM，解决医护 / 医患沟通延迟、丢包与数据隐私问题。</p>
+          <p>医疗机构专属 IM，解决医护 / 医患沟通延迟、丢包与数据隐私问题，支撑日常沟通与紧急诊疗。</p>
           <div class="hx-skill__tags" style="margin-bottom:14px">
             <span class="hx-tag hx-tag--hot">WebSocket</span>
             <span class="hx-tag">Service Worker</span>
             <span class="hx-tag">IndexedDB</span>
           </div>
           <ul>
-            <li>聊天核心能力 + IM SDK 私服；心跳检测、重连、离线推送与本地缓存</li>
-            <li>TLS + 令牌动态验证；日均 10 万+ 消息，覆盖 20+ 合作医疗机构</li>
+            <li>聊天核心能力 + IM SDK 私服；WebSocket 心跳重连、Service Worker 离线推送、IndexedDB 本地缓存</li>
+            <li>TLS + 令牌动态验证；日均 10 万+ 消息零丢包，覆盖 20+ 合作医疗机构</li>
           </ul>
         </article>
 
@@ -1317,33 +1330,51 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span>医百 · 核心开发</span><span class="dot" aria-hidden="true"></span><span>2022.04 — 2022.10</span>
           </div>
           <h3>医百 SaaS · 租户前台</h3>
-          <p>医疗健康 SaaS 租户前台，支撑全国百余家机构的个性化租户需求。</p>
+          <p>医疗健康 SaaS 租户前台，解决单体首屏慢、模块迭代难、定制化效率低，支撑全国百余家机构个性化需求。</p>
           <div class="hx-skill__tags" style="margin-bottom:14px">
             <span class="hx-tag hx-tag--hot">Vue3</span>
             <span class="hx-tag hx-tag--hot">micro-app</span>
             <span class="hx-tag">Element Plus</span>
           </div>
           <ul>
-            <li>微前端拆分与独立部署；解决应用通信、样式隔离、路由跳转</li>
+            <li>推动 micro-app 落地，完成核心业务拆分与独立部署；解决应用通信、样式隔离、路由跳转</li>
             <li>首屏 4.2s → 1.5s，公共组件复用率约 90%，支持 100+ 机构个性化配置</li>
           </ul>
         </article>
 
         <article class="hx-project">
           <div class="hx-project__meta">
-            <span>腾讯音乐 · 前端</span><span class="dot" aria-hidden="true"></span><span>2019.03 — 2019.11</span>
+            <span>腾讯音乐 · 前端</span><span class="dot" aria-hidden="true"></span><span>2019.08 — 2019.11</span>
           </div>
-          <h3>酷我 · 周期娱乐榜 / 直播审核后台</h3>
-          <p>老旧 JSP 活动页重构与直播内容审核后台，支撑大型运营与审核效率。</p>
+          <h3>腾讯音乐 · 直播后台管理系统</h3>
+          <p>酷我 / 聚星直播审核后台，解决人工审核繁琐、视频流占 CPU 高、敏感数据易泄露等问题。</p>
+          <div class="hx-skill__tags" style="margin-bottom:14px">
+            <span class="hx-tag hx-tag--hot">Vue</span>
+            <span class="hx-tag">videojs-hls</span>
+            <span class="hx-tag">ECharts</span>
+            <span class="hx-tag">AES-256</span>
+          </div>
+          <ul>
+            <li>集成 videojs-contrib-hls 做视频流分片播放，降低主线程 CPU 占用</li>
+            <li>ECharts 直播数据看板；审核规则引擎 + AES-256 敏感数据加密</li>
+          </ul>
+        </article>
+
+        <article class="hx-project">
+          <div class="hx-project__meta">
+            <span>腾讯音乐 · 前端</span><span class="dot" aria-hidden="true"></span><span>2019.03 — 2019.09</span>
+          </div>
+          <h3>腾讯音乐 · 周期娱乐榜</h3>
+          <p>酷我周期娱乐榜老旧 JSP 重构，解决打包体积大、加载慢、维护成本高，支撑大型运营活动。</p>
           <div class="hx-skill__tags" style="margin-bottom:14px">
             <span class="hx-tag hx-tag--hot">Vue MPA</span>
             <span class="hx-tag">React</span>
-            <span class="hx-tag">ECharts</span>
-            <span class="hx-tag">videojs-hls</span>
+            <span class="hx-tag">Webpack</span>
+            <span class="hx-tag">CDN</span>
           </div>
           <ul>
-            <li>周期榜 JSP → Vue MPA，构建优化 + CDN；活动页访问速度提升约 70%</li>
-            <li>审核后台 HLS 分片播放降 CPU、数据看板与 AES-256 敏感数据加密</li>
+            <li>JSP → Vue MPA，构建优化、代码分割与 CDN；适配 PC / H5</li>
+            <li>活动页访问速度提升约 70%，停留时长增加约 30%，支撑 5+ 大型运营活动</li>
           </ul>
         </article>
 
@@ -1352,15 +1383,16 @@ html, body { margin: 0; padding: 0; background: #e8edf3; }
             <span>鲜易 · 前端</span><span class="dot" aria-hidden="true"></span><span>2016.05 — 2016.09</span>
           </div>
           <h3>鲜易网 · 微信商城</h3>
-          <p>生鲜 B2B 微信商城：商品展示与微信支付全流程，提升订单转化。</p>
+          <p>生鲜 B2B 微信商城：商品展示与微信支付全流程，解决支付繁琐、加载慢、成功率低，提升订单转化。</p>
           <div class="hx-skill__tags" style="margin-bottom:14px">
             <span class="hx-tag hx-tag--hot">Vue2</span>
             <span class="hx-tag">Mint-UI</span>
+            <span class="hx-tag">Swiper</span>
             <span class="hx-tag">微信支付 SDK</span>
           </div>
           <ul>
-            <li>独立完成核心页面与支付集成；LocalStorage 缓存减少重复请求</li>
-            <li>攻克多机型 / 微信版本兼容与支付回调问题</li>
+            <li>独立完成核心页面与支付集成；LocalStorage 缓存减少重复请求；支付成功率 78% → 98%</li>
+            <li>图片懒加载 / Swiper 交互优化；攻克多机型、微信版本兼容与支付回调问题</li>
           </ul>
         </article>
       </div>
