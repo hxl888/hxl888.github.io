@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[19],{166:function(n,t,s){"use strict";s.r(t);var e=s(0),u=Object(e.a)({},(function(){var n=this._self._c;return n("div",{staticClass:"content"},[n("HxResume")],1)}),[],!1,null,null,null);t.default=u.exports}}]);
