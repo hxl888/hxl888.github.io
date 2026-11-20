@@ -15,8 +15,8 @@
       <h1 class="hh-brand">蜗蜗</h1>
 
       <div class="hh-actions">
-        <a class="hh-btn hh-btn--primary" href="/resume.html">查看简历</a>
-        <a class="hh-btn hh-btn--ghost" href="/pages/javascript/">随便逛逛</a>
+        <a class="hh-btn hh-btn--primary" href="/pages/resume/myself.html">查看简历</a>
+        <a class="hh-btn hh-btn--ghost" href="https://hxl888.github.io/jingpan/">紫微斗数</a>
       </div>
     </section>
 
@@ -39,7 +39,6 @@
 
     <footer class="hh-foot">
       <span>© 胡新磊 · 蜗蜗</span>
-      <a href="https://github.com/hxl888" target="_blank" rel="noopener">GitHub</a>
     </footer>
   </div>
 </template>

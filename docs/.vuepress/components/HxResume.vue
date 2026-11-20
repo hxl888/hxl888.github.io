@@ -501,6 +501,7 @@
 export default {
   name: 'HxResume',
   mounted () {
+    document.documentElement.classList.add('hx-resume-page')
     this.boot()
     if (!document.getElementById('hx-fonts')) {
       const link = document.createElement('link')
@@ -511,6 +512,7 @@ export default {
     }
   },
   beforeDestroy () {
+    document.documentElement.classList.remove('hx-resume-page')
     if (this._onScroll) window.removeEventListener('scroll', this._onScroll)
     if (this._raf) cancelAnimationFrame(this._raf)
   },
@@ -561,6 +563,22 @@ export default {
 </script>
 
 <style>
+/* Hide VuePress chrome when resume is embedded as a page */
+html.hx-resume-page .sidebar,
+html.hx-resume-page .sidebar-button,
+html.hx-resume-page .page-edit,
+html.hx-resume-page .page-nav,
+html.hx-resume-page .navbar {
+  display: none !important;
+}
+html.hx-resume-page .page {
+  padding-left: 0 !important;
+}
+html.hx-resume-page .content {
+  max-width: none !important;
+  padding: 0 !important;
+}
+
 /* Resume is primarily served at /resume.html.
    Keep styles under .hx so normal VuePress pages stay intact. */
 .hx {

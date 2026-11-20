@@ -8,7 +8,6 @@ module.exports = {
     ],
     themeConfig: {
         activeHeaderLinks: true,
-        repo: 'https://github.com/hxl888',
         search: true,
         searchMaxSuggestions: 10,
         nav: [
@@ -17,45 +16,14 @@ module.exports = {
                 link: '/'
             },
             {
-                text: '笔记',
-                items: [
-                    { text: 'Git', link: '/pages/gits/' },
-                    { text: 'JS 集', link: '/pages/javascript/' },
-                    { text: 'Mac 配置', link: '/pages/macConfig/' },
-                    { text: '小结', link: '/pages/toSumUp/' },
-                    { text: '后端', link: '/pages/backstage/' }
-                ]
+                text: '简历',
+                link: '/pages/resume/myself'
+            },
+            {
+                text: '紫微斗数',
+                link: 'https://hxl888.github.io/jingpan/'
             }
         ],
-        sidebar: {
-            '/pages/resume/': [
-                '',
-                'myself'
-            ],
-            '/pages/gits/': [
-                '',
-                'gitDetails',
-                'gitCommit'
-            ],
-            '/pages/javascript/': [
-                '',
-                'es6',
-                'numSort',
-                'algorithm',
-            ],
-            '/pages/macConfig/': [
-                '',
-                'macConfig'
-            ],
-            '/pages/toSumUp/': [
-                '',
-                'climbonPit'
-            ],
-            '/pages/backstage/': [
-                '',
-                'nginx',
-                'node'
-            ]
-        }
+        sidebar: false
     }
 }
